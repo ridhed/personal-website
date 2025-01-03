@@ -1,17 +1,10 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "description": "A personal website to showcase projects.",
-  "main": "src/index.html",
+  "description": "Portfolio website of Riddhi Hedaoo",
   "scripts": {
-    "start": "live-server src",
-    "build": "echo 'Build step not defined'",
-    "test": "echo 'No tests defined'"
+    "start": "http-server src"
   },
-  "author": "Your Name",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+  "author": "Riddhi Hedaoo",
+  "license": "MIT"
 }

@@ -22,11 +22,19 @@ personal-website
 └── README.md
 ```
 
-## Features
+# Personal Website
 
-- **Responsive Design**: The website is designed to be responsive and accessible on various devices.
-- **Dynamic Content**: JavaScript is used to handle interactivity and dynamic content updates.
-- **Modular Components**: The header is created as a separate component for reusability across different pages.
+This is the portfolio website of Riddhi Hedaoo, an AI enthusiast and developer. The website showcases education, projects, and skills.
+
+## Features
+- Project Showcase
+- Contact Information
+- Clean and Responsive Design
+
+## Usage
+1. Clone the repository.
+2. Navigate to the `src` folder and open `index.html` in a browser.
+
 
 ## Setup Instructions
 
