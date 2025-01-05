@@ -131,7 +131,8 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background: rgba(255, 255, 255, 0.2); /* Light semi-transparent white background */
+    backdrop-filter: blur(10px); /* Adds blur effect to the background */
     border-radius: 10px;
 }
 
