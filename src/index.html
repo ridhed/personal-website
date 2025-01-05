@@ -3,28 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riddhi Hedaoo Portfolio</title>
+    <title>Planet Explorer Portfolio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="assets/js/scripts.js"></script>
 </head>
 <body>
-    <header>
-        <?php include 'components/header.html'; ?>
-    </header>
-    <main>
-        <section id="about">
-            <h1>Riddhi Hedaoo</h1>
-            <p>AI enthusiast, developer, and lifelong learner based in Nagpur, India.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p><a href="projects/project1.html">Credit Card Approval Prediction</a></p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: ridhed2311@gmail.com</p>
-        </section>
-    </main>
-    <script src="assets/js/scripts.js"></script>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <img src="assets/images/logo_astronaut.png" alt="logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="projects/project1.html">PROJECTS</a></li>
+                    <li><a href="components/about.html">ABOUT</a></li>
+                    <li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a>
+                    </li>                                                    
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Welcome Message -->
+        <main class="main-content">
+            <section class="welcome-section">
+                <div class="text-content">
+                    <h1>Welcome, Explorer!</h1>
+                    <p class="intro-text">You’ve landed on the planet of <strong>Riddhi Hedaoo</strong>, where AI meets innovation. Explore my projects and skills as I terraform my ideas into reality.</p>
+                    <a href="assets/documents/Resume.pdf" class="btn">Download CV</a>
+                </div>
+                <div class="image-content">
+                    <img src="assets/images/female_astronaut.png" alt="Astronaut on Planet" class="hero-image">
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
