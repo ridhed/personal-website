@@ -54,63 +54,56 @@
                     </div>
                 </section>
 
-                <!-- Education Section -->
-                <section id="education" class="info-section">
-                    <h2 class="section-title">🌠 Education: My Astronomical Foundation</h2>
-                    <p class="section-content">
-                        🎓 <strong>Education</strong><br>
-                        - <strong>B.E. in Computer Science and Engineering</strong>, Government College of Engineering (2023)<br>
-                        CGPA: 8.46/10 | Rank: 2nd in the 2023 Merit List for CSE at RTMNU<br><br>
-                        - <strong>Diploma in Computer Technology</strong>, Shree Datta Meghe Polytechnic College (2020)<br>
-                        CGPA: 9.8/10<br><br>
-                        - <strong>Secondary School</strong>, Kurveys New Model Public School (2011-2017)<br>
-                        CGPA: 9.8/10<br>
-                    </p>
-                </section>
+            <!-- Chat Bot -->
+                <div id="chatbot">
+                    <h2>Ask me anything related to my portfolio here!</h2>
+                    <textarea id="userQuery" rows="4" placeholder="Type your question here..."></textarea>
+                    <button id="askButton">Ask</button>
+                    <div id="chatResponse"></div>
+                </div>
+                
+                <script>
+                    // Function to send the user's query to the Flask server
+                    async function askQuestion() {
+                    const query = document.getElementById("userQuery").value;
 
-                <!-- Experience Section -->
-                <section id="experience" class="info-section">
-                    <h2 class="section-title">🌠 Work Experience: Navigating My Career Galaxy</h2>
-                    <p class="section-content">
-                        Although I’m at the beginning of my career, I’ve gained valuable hands-on experience through internships and projects, working with data to solve practical challenges. I’m excited to further explore and grow in the world of AI, machine learning, and data science.
-                    </p>
-                    <ul class="section-content">
-                        <li><strong>AINE AI (2022) - Business Intelligence Intern:</strong> Worked on data analytics and business intelligence projects, helping to transform raw data into strategic insights.</li>
-                        <li><strong>IT Networkz Infosystems Pvt Ltd (2019) - Intern:</strong> Created network systems using Cisco Network Diagram Software, optimizing communication systems across diverse teams.</li>
-                        <li><strong>VS Informatics Pvt Ltd (2019) - Intern:</strong> Built a gesture-controlled car with RF communication, utilizing embedded systems to enhance automation and real-time control.</li>
-                    </ul>
-                </section>
+                    if (!query.trim()) {
+                        alert("Please type a question.");
+                        return;
+                    }
 
-                <!-- Projects Section -->
-                <section id="projects" class="info-section">
-                    <h2 class="section-title">🌠 Projects: My Contributions to the Universe of Data</h2>
-                    <ul class="section-content">
-                        <li><strong>🌟 Credit Card Approval Prediction:</strong> [GitHub](https://github.com/ridhed/Credit-Card-Approval-Prediction)</li>
-                        <li><strong>🪐 Academic Life Assistance and Guidance:</strong> [GitHub](https://github.com/ridhed/ALAG-Repository)</li>
-                        <li><strong>🌌 Accumulated Report Analysis of Youth:</strong> [GitHub](https://github.com/ridhed/A-RAY-Repository)</li>
-                        <li><strong>🚀 Gesture Controlled Car:</strong> [Project Video](https://youtu.be/_YKwTQOFSeM)</li>
-                    </ul>
-                </section>
+                    const responseDiv = document.getElementById("chatResponse");
+                    responseDiv.innerHTML = "Thinking...";
 
-                <!-- Skills Section -->
-                <section id="skills" class="info-section">
-                    <h2 class="section-title">🛠️ Skills: My Tools for Exploration</h2>
-                    <p class="section-content">
-                        <strong>Data Analytics & Programming:</strong><br>
-                        Python, Machine Learning, NLP, AI, MySQL, Excel<br><br>
-                        <strong>Data Visualization & Project Management:</strong><br>
-                        Matplotlib, PowerBI, Git, Flask<br><br>
-                        <strong>Languages:</strong><br>
-                        English (Fluent), Hindi (Fluent), Marathi (Native)
-                    </p>
-                </section>
+                    try {
+                        const response = await fetch("http://127.0.0.1:5000/ask", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ query }),
+                        });
 
-                <!-- Contact Section -->
-                <section id="contact" class="info-section">
-                    <h2 class="section-title">🌌 Connect with Me:</h2>
-                    <p class="section-content">
-                        I would love to collaborate on projects, exchange knowledge, and contribute to the ever-growing AI community. Don’t hesitate to reach out if you’d like to explore new possibilities together.
-                    </p>
+                        const data = await response.json();
+
+                        if (data.error) {
+                            responseDiv.innerHTML = `Error: ${data.error}`;
+                        } else {
+                            responseDiv.innerHTML = `
+                                <p><strong>Question:</strong> ${query}</p>
+                                <p><strong>Answer:</strong> ${data.response}</p>
+                                <p><strong>Asked on:</strong> ${data.date}</p>
+                            `;
+                        }
+                    } catch (error) {
+                        responseDiv.innerHTML = `Error: ${error.message}`;
+                    }
+                }
+
+                // Add event listener to the button
+                document.getElementById("askButton").addEventListener("click", askQuestion);
+
+                </script>
                 </section>
             </div>
         </div>
