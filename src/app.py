@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 from datetime import datetime
 from flask_cors import CORS
 import os
-os.environ["HUGGINGFACE_HUB_TOKEN"] = "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"
+
 
 
 # Initialize Flask app
