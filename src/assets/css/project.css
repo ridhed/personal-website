@@ -1,0 +1,176 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the tabs */
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border-bottom: 3px solid #0099ff; 
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+    border-color: #fff;
+}
+
+
+/* Project Cards Container */
+.projects-section {
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Monitor-style Project Card */
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card.monitor {
+    background-color: #111;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-card.monitor:hover {
+    transform: translateY(-10px);
+}
+
+.screen {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(125, 156, 255, 0.5);
+    overflow: hidden;
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+/* Initially hide the info section */
+.project-card .info {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* When the info section is active (visible) */
+.project-card .info.active {
+    display: block;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for the info section */
+    border-radius: 10px;
+}
+
+.project-card.monitor.active .info {
+    display: block;
+}
+
+.project-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    margin-top: 15px;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Hover Effects */
+.project-card.monitor:hover .screen {
+    box-shadow: 0 0 30px rgba(125, 156, 255, 0.7);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 10px;
+}

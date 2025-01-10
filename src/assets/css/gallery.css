@@ -21,6 +21,7 @@ body {
     top: 0;
     z-index: 10;
     transition: background-color 0.3s ease;
+    border-bottom: 3px solid #0099ff; 
 }
 
 .navbar:hover {

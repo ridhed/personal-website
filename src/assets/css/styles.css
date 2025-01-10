@@ -33,6 +33,7 @@ body {
     top: 0;
     z-index: 10;
     transition: background-color 0.3s ease;
+    border-bottom: 3px solid #0099ff; 
 }
 
 .navbar:hover {
@@ -127,79 +128,13 @@ body {
 /* Hero Image */
 .hero-image {
     width: 100%;
-    max-width: 350px;
+    max-width: 470px;
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
 .hero-image:hover {
     transform: scale(1.05);
-}
-
-/* Sidebar Styling */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Initially hidden */
-    width: 250px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
-    padding-top: 20px;
-    color: #fff;
-    z-index: 5;
-    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    margin-left: 20px;
-    margin-bottom: 25px;
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Toggle Button for Sidebar */
-.toggle-btn {
-    font-size: 1.5rem;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 20;
-    transition: background 0.3s ease;
-}
-
-.toggle-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Footer */
-footer {
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #dcdcdc;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 /* Responsive Design */

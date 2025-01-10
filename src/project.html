@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Explorer Portfolio</title>
+    <link rel="stylesheet" href="assets/css/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
+    <div class="container">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('project') }}">PROJECTS</a></li>
+                    <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Project Cards with Monitor Screen Effect -->
+        <section class="projects-section">
+            <div class="project-cards-container">
+                <!-- Project 1 -->
+                <div class="project-card monitor">
+                    <div class="screen">
+                        <img src="assets/images/projects/credit-card.webp" alt="Credit Card Approval Prediction">
+                    </div>
+                    <div class="info">
+                        <h2>Credit Card Approval Prediction</h2>
+                        <p><strong>Date:</strong> 2024</p>
+                        <p><strong>Tools:</strong> Python, Machine Learning</p>
+                        <p><strong>Overview:</strong> A model that predicts credit card approval based on income and other factors.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card monitor">
+                    <div class="screen">
+                        <img src="assets/images/projects/academic-life.jpeg" alt="Academic Life Assistance">
+                    </div>
+                    <div class="info">
+                        <h2>Academic Life Assistance</h2>
+                        <p><strong>Date:</strong> 2023</p>
+                        <p><strong>Tools:</strong> Python, Flask, NLP</p>
+                        <p><strong>Overview:</strong> A website to assist students with personalized academic guidance.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card monitor">
+                    <div class="screen">
+                        <img src="assets/images/projects/accumulated-report.jpeg" alt="Youth Report Analysis">
+                    </div>
+                    <div class="info">
+                        <h2>Accumulated Report Analysis of Youth</h2>
+                        <p><strong>Date:</strong> 2022</p>
+                        <p><strong>Tools:</strong> Python, Flask, ML Models</p>
+                        <p><strong>Overview:</strong> Analyzed emotional well-being trends of youth with interactive visualizations.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card monitor">
+                    <div class="screen">
+                        <img src="assets/images/projects/gesture-car.jpg" alt="Gesture Controlled Car">
+                    </div>
+                    <div class="info">
+                        <h2>Gesture Controlled Car</h2>
+                        <p><strong>Date:</strong> 2019</p>
+                        <p><strong>Tools:</strong> C#, Gesture Recognition</p>
+                        <p><strong>Overview:</strong> Developed a system for controlling a car using hand gestures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.querySelectorAll('.project-card.monitor').forEach(card => {
+                card.addEventListener('click', () => {
+                    // Close all other info sections
+                    document.querySelectorAll('.project-card.monitor .info').forEach(info => {
+                        if (info !== card.querySelector('.info')) {
+                            info.classList.remove('active');
+                        }
+                    });
+                    // Toggle the clicked card's info
+                    const infoSection = card.querySelector('.info');
+                    infoSection.classList.toggle('active');
+                });
+            });
+        </script>  
+        <!-- Footer -->
+        <footer>
+            <div>
+                <a href="https://x.com/RiddhiXAI" target="_blank">Twitter</a> | 
+                <a href="https://github.com/ridhed" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Riddhi Hedaoo. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
