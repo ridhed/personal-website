@@ -15,65 +15,70 @@
             <header class="navbar">
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="project1.html">PROJECTS</a></li>
+                        <li><a href="{{ url_for('index') }}">HOME</a></li>
+                        <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                        <li><a href="{{ url_for('project') }}">PROJECTS</a></li>
+                        <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
                         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
                     </ul>
                 </nav>
-            </header>
-            
-            <h1>About Me</h1>
-            
-            <div class="chat-container">
-                <div id="chat-box">
-                    <!-- Chat messages will appear here -->
+            </header>   
+            <body>
+                <div class="screen-container">
+                    <!-- Screen Title Bar -->
+                    <div class="screen-title-bar">
+                        <p class="title">aboutme.ask</p>
+                        <div class="social-buttons">
+                            <a href="https://x.com/RiddhiXAI" target="_blank" class="social-button" title="Twitter">
+                                <img src="assets/images/icons/twitter-icon.png" alt="Twitter">
+                            </a>
+                            <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-button" title="LinkedIn">
+                                <img src="assets/images/icons/linkedin-icon.png" alt="LinkedIn">
+                            </a>
+                            <a href="https://github.com/ridhed" target="_blank" class="social-button" title="GitHub">
+                                <img src="assets/images/icons/github-icon.png" alt="GitHub">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Main Screen Content -->
+                    <div class="chat-container">
+                        <div id="chat-box">
+                            <!-- Bot's messages -->
+                            <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!</p>
+                            <p class="bot-message"><span class="bold-text">Bot:</span> Curious about what fueled my journey to this distant world? Ask me about my passion and the path that led me here!</p>
+                        </div>                                           
+                        <input type="text" id="user-input" placeholder="Ask me a question..." />
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
                 </div>
-                <input type="text" id="user-input" placeholder="Ask me a question..." />
-                <button onclick="sendMessage()">Send</button>
-            </div>
-            
-            <!-- Footer -->
-            <footer>
-                <div class="social-icons">
-                    <a href="https://x.com/RiddhiXAI" target="_blank" class="social-icon">
-                        <img src="assets/images/icons/twitter-icon.png" class="social-icon-img" alt="Twitter">
-                    </a>
-                    <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-icon">
-                        <img src="assets/images/icons/linkedin-icon.png" class="social-icon-img" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/ridhed" target="_blank" class="social-icon">
-                        <img src="assets/images/icons/github-icon.png" class="social-icon-img" alt="GitHub">
-                    </a>
-                </div>
-                <p>Connect with me on social media!</p>
-            </footer>
-        </div>
+        
+                <script>
+                    function sendMessage() {
+                        const userInput = document.getElementById('user-input').value;
+                        const chatBox = document.getElementById('chat-box');
+        
+                        // Add user's message to chat, making "You:" bold
+                        chatBox.innerHTML += `<p class="user-message"><span class="bold-text">You:</span> ${userInput}</p>`;
 
-        <script>
-            function sendMessage() {
-                const userInput = document.getElementById('user-input').value;
-                const chatBox = document.getElementById('chat-box');
-                
-                // Add user's message to chat
-                chatBox.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
-                
-                // Send the message to Flask
-                fetch('/chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: `user_message=${encodeURIComponent(userInput)}`
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Display bot's response
-                    chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.bot_response}</p>`;
-                    document.getElementById('user-input').value = '';
-                });
-            }
-        </script>
-    </body>
-</html>
+                        // Clear the input field after sending
+                        document.getElementById('user-input').value = '';
+        
+                        // Send the message to Flask
+                        fetch('/chat', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                            },
+                            body: `user_message=${encodeURIComponent(userInput)}`
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Display bot's response
+                            chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.bot_response}</p>`;
+                            document.getElementById('user-input').value = '';
+                        });
+                    }
+                </script>
+            </body>
+        </html>
