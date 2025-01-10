@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About | Riddhi Jayant Hedaoo</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/about_styles.css">
-    </head>
-    <body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
-        <div class="container">
-            <!-- Navigation Bar -->
-            <header class="navbar">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="{{ url_for('index') }}">HOME</a></li>
-                        <li><a href="{{ url_for('about') }}">ABOUT</a></li>
-                        <li><a href="{{ url_for('project') }}">PROJECTS</a></li>
-                        <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
-                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </header>   
-            <body>
-                <div class="screen-container">
-                    <!-- Screen Title Bar -->
-                    <div class="screen-title-bar">
-                        <p class="title">aboutme.ask</p>
-                        <div class="social-buttons">
-                            <a href="https://x.com/RiddhiXAI" target="_blank" class="social-button" title="Twitter">
-                                <img src="assets/images/icons/twitter-icon.png" alt="Twitter">
-                            </a>
-                            <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-button" title="LinkedIn">
-                                <img src="assets/images/icons/linkedin-icon.png" alt="LinkedIn">
-                            </a>
-                            <a href="https://github.com/ridhed" target="_blank" class="social-button" title="GitHub">
-                                <img src="assets/images/icons/github-icon.png" alt="GitHub">
-                            </a>
-                        </div>
-                    </div>
-        
-                    <!-- Main Screen Content -->
-                    <div class="chat-container">
-                        <div id="chat-box">
-                            <!-- Bot's messages -->
-                            <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!</p>
-                            <p class="bot-message"><span class="bold-text">Bot:</span> Curious about what fueled my journey to this distant world? Ask me about my passion and the path that led me here!</p>
-                        </div>                                           
-                        <input type="text" id="user-input" placeholder="Ask me a question..." />
-                        <button onclick="sendMessage()">Send</button>
-                    </div>
-                </div>
-        
-                <script>
-                    function sendMessage() {
-                        const userInput = document.getElementById('user-input').value;
-                        const chatBox = document.getElementById('chat-box');
-        
-                        // Add user's message to chat, making "You:" bold
-                        chatBox.innerHTML += `<p class="user-message"><span class="bold-text">You:</span> ${userInput}</p>`;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Riddhi Jayant Hedaoo</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/about_styles.css">
+</head>
+<body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
+    <div class="container">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('project') }}">PROJECTS</a></li>
+                    <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>   
 
-                        // Clear the input field after sending
-                        document.getElementById('user-input').value = '';
-        
-                        // Send the message to Flask
-                        fetch('/chat', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: `user_message=${encodeURIComponent(userInput)}`
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            // Display bot's response
-                            chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.bot_response}</p>`;
-                            document.getElementById('user-input').value = '';
-                        });
-                    }
-                </script>
-            </body>
-        </html>
+        <div class="screen-container">
+            <!-- Screen Title Bar -->
+            <div class="screen-title-bar">
+                <p class="title">aboutme.ask</p>
+                <div class="social-buttons">
+                    <a href="https://x.com/RiddhiXAI" target="_blank" class="social-button" title="Twitter">
+                        <img src="assets/images/icons/twitter-icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-button" title="LinkedIn">
+                        <img src="assets/images/icons/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ridhed" target="_blank" class="social-button" title="GitHub">
+                        <img src="assets/images/icons/github-icon.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Screen Content -->
+            <div class="chat-container">
+                <div id="chat-box">
+                    <!-- Bot's messages -->
+                    <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!</p>
+                    <p class="bot-message"><span class="bold-text">Bot:</span> Curious about what fueled my journey to this distant world? Ask me about my passion and the path that led me here!</p>
+                </div>                                           
+                <input type="text" id="user-input" placeholder="Ask me a question..." onkeydown="checkEnter(event)" />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to send message
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatBox = document.getElementById('chat-box');
+
+            // Add user's message to chat, making "You:" bold
+            chatBox.innerHTML += `<p class="user-message"><span class="bold-text">You:</span> ${userInput}</p>`;
+
+            // Clear the input field after sending
+            document.getElementById('user-input').value = '';
+
+            // Send the message to Flask
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `user_message=${encodeURIComponent(userInput)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display bot's response
+                chatBox.innerHTML += `<p><span class="bold-text">Bot:</span> ${data.bot_response}</p>`;
+                document.getElementById('user-input').value = '';
+            });
+        }
+
+        // Function to detect Enter key press
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                sendMessage();  // Call the sendMessage function when Enter is pressed
+            }
+        }
+    </script>                
+</body>
+</html>
