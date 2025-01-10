@@ -9,7 +9,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/about_styles.css">
     </head>
-    <body style="background: url('assets/images/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
+    <body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
         <div class="container">
             <!-- Navigation Bar -->
             <header class="navbar">
@@ -17,95 +17,63 @@
                     <ul class="nav-links">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="projects/project1.html">PROJECTS</a></li>
+                        <li><a href="project1.html">PROJECTS</a></li>
                         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
                     </ul>
                 </nav>
             </header>
-
-            <!-- Sidebar with Profile and Social Icons -->
-            <div class="sidebar">
-                <div class="profile-box">
-                    <img src="assets/images/profile_picture.jpeg" alt="Riddhi Jayant Hedaoo" class="profile-photo">
-                    <div class="social-icons">
-                        <a href="https://x.com/RiddhiXAI" target="_blank" class="social-icon">
-                            <img src="assets/images/twitter-icon.png" class="social-icon-img">
-                        </a>
-                        <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-icon">
-                            <img src="assets/images/linkedin-icon.png" class="social-icon-img">
-                        </a>
-                        <a href="https://github.com/ridhed" target="_blank" class="social-icon">
-                            <img src="assets/images/github-icon.png" class="social-icon-img">
-                        </a>
-                    </div>
+            
+            <h1>About Me</h1>
+            
+            <div class="chat-container">
+                <div id="chat-box">
+                    <!-- Chat messages will appear here -->
                 </div>
+                <input type="text" id="user-input" placeholder="Ask me a question..." />
+                <button onclick="sendMessage()">Send</button>
             </div>
-
-            <!-- Main Content -->
-            <div class="main-content">
-                <section id="introduction" class="info-section">
-                    <div class="introduction-content">
-                        <div class="left-section">
-                            <h2 class="section-title">🌍 Welcome to My Planet: A Journey into the Abyss of AI</h2>
-                            <p class="section-content">
-                                Hello, I’m <strong>Riddhi Jayant Hedaoo</strong>, an explorer on a mission to chart new worlds within the realms of <strong>AI</strong>, <strong>Machine Learning</strong>, <strong>NLP</strong>, <strong>GenAI</strong>, <strong>Data Science</strong>, and beyond. Through years of learning and experimenting, I’ve landed on a planet where data is the lifeblood, and insights are the treasures I uncover.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-            <!-- Chat Bot -->
-                <div id="chatbot">
-                    <h2>Ask me anything related to my portfolio here!</h2>
-                    <textarea id="userQuery" rows="4" placeholder="Type your question here..."></textarea>
-                    <button id="askButton">Ask</button>
-                    <div id="chatResponse"></div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="social-icons">
+                    <a href="https://x.com/RiddhiXAI" target="_blank" class="social-icon">
+                        <img src="assets/images/icons/twitter-icon.png" class="social-icon-img" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-icon">
+                        <img src="assets/images/icons/linkedin-icon.png" class="social-icon-img" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ridhed" target="_blank" class="social-icon">
+                        <img src="assets/images/icons/github-icon.png" class="social-icon-img" alt="GitHub">
+                    </a>
                 </div>
-                
-                <script>
-                    // Function to send the user's query to the Flask server
-                    async function askQuestion() {
-                    const query = document.getElementById("userQuery").value;
-
-                    if (!query.trim()) {
-                        alert("Please type a question.");
-                        return;
-                    }
-
-                    const responseDiv = document.getElementById("chatResponse");
-                    responseDiv.innerHTML = "Thinking...";
-
-                    try {
-                        const response = await fetch("http://127.0.0.1:5000/ask", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                            },
-                            body: JSON.stringify({ query }),
-                        });
-
-                        const data = await response.json();
-
-                        if (data.error) {
-                            responseDiv.innerHTML = `Error: ${data.error}`;
-                        } else {
-                            responseDiv.innerHTML = `
-                                <p><strong>Question:</strong> ${query}</p>
-                                <p><strong>Answer:</strong> ${data.response}</p>
-                                <p><strong>Asked on:</strong> ${data.date}</p>
-                            `;
-                        }
-                    } catch (error) {
-                        responseDiv.innerHTML = `Error: ${error.message}`;
-                    }
-                }
-
-                // Add event listener to the button
-                document.getElementById("askButton").addEventListener("click", askQuestion);
-
-                </script>
-                </section>
-            </div>
+                <p>Connect with me on social media!</p>
+            </footer>
         </div>
+
+        <script>
+            function sendMessage() {
+                const userInput = document.getElementById('user-input').value;
+                const chatBox = document.getElementById('chat-box');
+                
+                // Add user's message to chat
+                chatBox.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+                
+                // Send the message to Flask
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `user_message=${encodeURIComponent(userInput)}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display bot's response
+                    chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.bot_response}</p>`;
+                    document.getElementById('user-input').value = '';
+                });
+            }
+        </script>
     </body>
 </html>

@@ -1,51 +1,27 @@
-from transformers import pipeline
-from huggingface_hub import login
-from flask import Flask, request, jsonify
-from datetime import datetime
-from flask_cors import CORS
-import os
+from flask import Flask, render_template, request, jsonify
+import pandas as pd
 
-
-
-# Initialize Flask app
 app = Flask(__name__)
 
-# Enable CORS for all routes
-CORS(app)
+# Load the Excel file
+faq_df = pd.read_excel('faq.xlsx')
 
-generator = pipeline(
-    "text-generation", 
-    model="gpt2", 
-    tokenizer="gpt2",  # Specify tokenizer explicitly
-    use_auth_token=os.getenv("HUGGINGFACE_HUB_TOKEN"),
-    truncation=True  # Explicitly enable truncation
-)
+# Function to search for an answer based on the user's question
+def get_answer(question):
+    for _, row in faq_df.iterrows():
+        if question.lower() in row['Question'].lower():
+            return row['Answer']
+    return "Sorry, I don't have an answer to that."
 
+@app.route('/')
+def home():
+    return render_template('about.html')
 
-
-
-@app.route('/ask', methods=['POST'])
-def ask_question():
-    data = request.json
-    user_query = data.get("query")
-
-    if not user_query:
-        return jsonify({"error": "Query is required"}), 400
-
-    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    try:
-        # Generate response using LLaMA model
-        response = generator(user_query, max_length=150, truncation=True)
-
-
-        answer = response[0]['generated_text'].strip()
-        return jsonify({
-            "response": answer,
-            "date": current_date
-        })
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.form['user_message']
+    bot_response = get_answer(user_message)
+    return jsonify({'bot_response': bot_response})
 
 if __name__ == '__main__':
     app.run(debug=True)
