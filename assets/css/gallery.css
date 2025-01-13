@@ -28,13 +28,6 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -56,6 +49,88 @@ body {
 .nav-links li a:hover {
     background-color: #575757;
     border-color: #fff;
+}
+
+/* Hamburger Icon Styles (Mobile menu toggle) */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation - Hidden by default */
+.nav-links {
+    display: flex; /* Make sure nav-links are displayed on desktop by default */
+}
+
+/* Show the menu when active (mobile view) */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For devices with a max-width of 768px (tablets and mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the navbar items */
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on small screens */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* For devices with a max-width of 480px (small mobile phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 2px;
+    }
 }
 
 /* Main Container */

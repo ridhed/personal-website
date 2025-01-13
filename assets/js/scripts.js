@@ -90,3 +90,8 @@ function checkEnter(event) {
     }
 }
 
+// Function to toggle the navigation menu visibility on small screens
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active'); // This toggles the 'active' class on nav-links
+}

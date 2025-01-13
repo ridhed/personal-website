@@ -9,18 +9,23 @@
 </head>
 <body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
     <div class="container">
-        <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
         <header class="navbar">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="project.html">PROJECTS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="mailto:ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="project.html">PROJECTS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="mailto:ridhed2311@gmail.com" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
 
         <!-- Project Cards with Monitor Screen Effect -->
         <section class="projects-section">
@@ -103,5 +108,7 @@
             <p>&copy; 2025 Riddhi Hedaoo. All Rights Reserved.</p>
         </footer>
     </div>
+        <!-- Scripts -->
+        <script src="assets/js/scripts.js"></script>
 </body>
 </html>
