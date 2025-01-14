@@ -1,29 +1,17 @@
-/* General Styling */
+/* Page Background */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
+    background: url('../images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Container */
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #fff;
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the tabs */
+    justify-content: center;
     align-items: center;
     padding: 15px 30px;
     background: rgba(0, 0, 0, 0.8);
@@ -62,6 +50,7 @@ body {
     background-color: #575757;
     border-color: #fff;
 }
+
 /* Hamburger Icon Styles (Mobile menu toggle) */
 .hamburger {
     display: none; /* Hidden by default */
@@ -79,7 +68,7 @@ body {
 
 /* Mobile Navigation - Hidden by default */
 .nav-links {
-    display: flex; /* Make sure nav-links are displayed on desktop by default */
+    display: flex; 
 }
 
 /* Show the menu when active (mobile view) */
@@ -91,17 +80,15 @@ body {
 }
 
 /* Media Queries for Responsive Design */
-
-/* For devices with a max-width of 768px (tablets and mobile) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack the navbar items */
+        flex-direction: column; 
         align-items: center;
         padding: 10px 15px;
     }
 
     .nav-links {
-        display: none; /* Hide links by default on small screens */
+        display: none; 
         justify-content: center;
         gap: 15px;
     }
@@ -128,7 +115,7 @@ body {
         flex-direction: column;
         padding: 10px;
     }
-
+    
     .nav-links {
         gap: 12px;
     }
@@ -143,36 +130,41 @@ body {
         height: 2px;
     }
 }
-/* Project Cards Container */
+
+/* Container for project cards */
 .projects-section {
     padding: 80px 20px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
-
-/* Monitor-style Project Card */
 .project-cards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: flex-start; 
+    margin: 20px 0;
 }
 
-.project-card.monitor {
-    background-color: #111;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    width: 280px;
-    position: relative;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    transition: transform 0.3s ease;
+/* Individual project card */
+.project-card {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    height: 500px; 
+    transition: transform 0.3s ease-in-out;
 }
 
-.project-card.monitor:hover {
-    transform: translateY(-10px);
+.project-card:hover {
+    transform: scale(1.05); 
 }
 
-.screen {
+.project-card .screen {
     width: 100%;
     height: 200px;
     background-color: #000;
@@ -181,51 +173,114 @@ body {
     overflow: hidden;
 }
 
-.screen img {
+.project-card .image-gallery {
+    display: flex;
+    gap: 10px; 
+    width: 100%;
+    height: 100%;
+}
+
+.project-card .image-gallery img {
+    width: calc(50% - 5px); 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* Information section of the card */
+.project-card .info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.project-card .info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0099ff;
+}
+
+.project-card .info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.project-card .info a {
+    color: #dfe4f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card .info a:hover {
+    text-decoration: underline;
+}
+
+.monitor .screen {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.monitor .screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+    z-index: 1;
+    transform: rotate(-10deg);
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(-10deg); }
+    100% { transform: translateX(100%) rotate(-10deg); }
+}
+
+.monitor .screen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .info {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-/* Initially hide the info section */
-.project-card .info {
-    display: none;
-    transition: all 0.3s ease;
+    padding: 1rem;
+    text-align: center;
 }
 
-/* When the info section is active (visible) */
-.project-card .info.active {
-    display: block;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background for the info section */
-    border-radius: 10px;
+.info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.project-card.monitor.active .info {
-    display: block;
+.info p {
+    margin: 0.3rem 0;
 }
 
-.project-card h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #00ffff;
-    margin-top: 15px;
+.info a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
-.project-card p {
-    font-size: 14px;
-    color: #999;
-}
-
-/* Hover Effects */
-.project-card.monitor:hover .screen {
-    box-shadow: 0 0 30px rgba(125, 156, 255, 0.7);
+.info a:hover {
+    background: #ffcc00;
 }
 
 /* Footer */
@@ -233,7 +288,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     background: rgba(0, 0, 0, 0.7);
-    margin-top: 40px;
+    margin-top: 0px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
 }
 

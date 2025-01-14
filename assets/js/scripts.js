@@ -90,8 +90,46 @@ function checkEnter(event) {
     }
 }
 
-// Function to toggle the navigation menu visibility on small screens
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active'); // This toggles the 'active' class on nav-links
-}
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Welcome to Riddhi Hedaoo's portfolio!");
+});
+
+const projectDetails = [
+    {
+        id: 1,
+        title: "Credit Card Approval Prediction",
+        image: "assets/images/projects/credit-card.webp",
+        date: "2024",
+        tools: "Python, Machine Learning",
+        overview: "A model that predicts credit card approval based on income and other factors.",
+        link: "https://github.com/ridhed/Credit-Card-Approval-Prediction"
+    },
+    {
+        id: 2,
+        title: "Academic Life Assistance",
+        image: "assets/images/projects/academic-life.jpeg",
+        date: "2023",
+        tools: "Python, Flask, NLP",
+        overview: "A website to assist students with personalized academic guidance.",
+        link: "https://github.com/ridhed/ALAG"
+    },
+    {
+        id: 3,
+        title: "Accumulated Report Analysis of Youth",
+        image: "assets/images/projects/accumulated-report.jpeg",
+        date: "2022",
+        tools: "Python, Flask, ML Models",
+        overview: "Analyzed emotional well-being trends of youth with interactive visualizations.",
+        link: "https://github.com/ridhed/A-RAY"
+    },
+    {
+        id: 4,
+        title: "Gesture Controlled Car",
+        image: "assets/images/projects/gesture-car.jpg",
+        date: "2019",
+        tools: "C#, Gesture Recognition",
+        overview: "Developed a system for controlling a car using hand gestures.",
+        link: "https://drive.google.com/file/d/18stOoIu0-Wv9eOsM6sfbgWvIDxAEt3uS/view"
+    }
+];
+
