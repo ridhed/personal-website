@@ -1,35 +1,29 @@
-/* Global Styles */
+/* General Styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    background-color: #000;
-    color: #fff;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 100%), url('assets/images/background/space-background.jpg');
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
     background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Container for the entire content */
+/* Container */
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 30px;
-    z-index: 1;
+    height: 100%;
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between hamburger and nav links */
     align-items: center;
     padding: 15px 30px;
     background: rgba(0, 0, 0, 0.8);
@@ -46,6 +40,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -68,12 +63,18 @@ body {
     background-color: #575757;
     border-color: #fff;
 }
-/* Hamburger Icon Styles (Mobile menu toggle) */
+
+/* Hamburger Icon */
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none; /* Hidden by default for larger screens */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
 }
 
 .hamburger div {
@@ -81,73 +82,70 @@ body {
     height: 3px;
     background-color: #fff;
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-/* Mobile Navigation - Hidden by default */
-.nav-links {
-    display: flex; /* Make sure nav-links are displayed on desktop by default */
+.hamburger:hover div {
+    background-color: #0099ff;
 }
 
-/* Show the menu when active (mobile view) */
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Media Queries for Responsive Design */
-
-/* For devices with a max-width of 768px (tablets and mobile) */
+/* Mobile View */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack the navbar items */
-        align-items: center;
-        padding: 10px 15px;
+    .hamburger {
+        display: flex;
     }
-
     .nav-links {
-        display: none; /* Hide links by default on small screens */
-        justify-content: center;
-        gap: 15px;
+        display: none; /* Hidden by default for mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        padding: 15px 0;
+        border-top: 3px solid #0099ff;
+        z-index: 10;
     }
-
     .nav-links.active {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hamburger {
-        display: flex; /* Show hamburger icon on small screens */
-    }
-
-    .nav-links li a {
-        font-size: 1rem;
-        padding: 10px;
     }
 }
 
-/* For devices with a max-width of 480px (small mobile phones) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
+/* Desktop View */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
     }
-
     .nav-links {
-        gap: 12px;
+        display: flex; /* Always display nav-links on larger screens */
+        position: static; /* Reset position */
+        flex-direction: row; /* Horizontal alignment */
+        gap: 25px; /* Maintain spacing */
+        padding: 0; /* No additional padding */
     }
+}
 
-    .nav-links li a {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-    }
 
-    .hamburger div {
-        width: 25px;
-        height: 2px;
-    }
+/* Adjust Navbar */
+.navbar {
+    justify-content: space-between; /* Space between hamburger and nav links */
+}
+
+/* Add animation on open/close */
+.hamburger div:nth-child(1) {
+    transform-origin: top left;
+}
+.hamburger div:nth-child(3) {
+    transform-origin: bottom left;
+}
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
 }
 .screen-container {
     position: absolute;
