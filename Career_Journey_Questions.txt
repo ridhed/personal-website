@@ -1,0 +1,89 @@
+
+<div class="tab active" onclick="showTab('career')">Career Journey</div>
+1. What inspired you to choose your career path?
+   Initially, I was drawn to commerce because of my love for math. By 10th grade, I knew I wanted a unique path—not mainstream options like engineering or medicine. Initially, I aspired to become a aeronautical engineer but I wasn't a fan of physics so just engineer was there to do when we removed physics from aeronautical.While exploring opportunities, my father introduced me to polytechnic studies, which fit both financially and academically as a twin sibling. My scores led me to a government engineering college in Nagpur, and though I didn't choose this path initially, it has since become my passion. After a gap year in 2024 to reassess my goals, I rediscovered my curiosity and passion, particularly inspired by the transformative potential of AI.I scored good marks that got me a Computer science and engineering seat in government college of engineering Nagpur. This is my path till now: I never choose this path It choose me. Sometimes when it is given to you without your asking you tend to forget it's worth. Now at this stage I thought this is not for me since i never choose it - I got lost. I wanted to my Ms in Canada and with offer letter in hand due to certain circumstances created in Canada and India relationship I cancelled my admission. Currently Im dying to showcase my abilities to the world. In 2024 i took a Gap year to reanalyse my aspirations and passion and to focus on what social impact I can have in India 
+. This year 2025 I regained what was lost within me the curiosity of why how was reintroduced by Ai and it talk around the town.
+
+2. What were your first steps into the industry?
+   While I haven’t formally started working in the industry yet, I’ve been building my technical foundation through my education and certifications. I planned to pursue an MS in Canada but had to cancel due to geopolitical circumstances. Taking a gap year helped me refocus on my aspirations and align them with creating a social impact in India with the help of techonology.
+
+3. What challenges did you face early in your career?
+   - Educational Confusion: Choosing a field without deep awareness of alternatives was challenging initially.
+   - Pandemic Impact: The COVID-19 pandemic disrupted my diploma studies and created uncertainties.
+   - Missed Opportunities: The cancellation of my MS plans in Canada was a significant setback, forcing me to reorient my goals.
+   - Self-Doubt: Questioning my place in the industry made me feel lost, but ultimately, these challenges reignited my drive.
+
+4. What does a typical day in your job look like?
+   Since I haven’t started working professionally yet, my current focus is on upskilling, building projects, and networking within the tech industry. My day involves studying new technologies, experimenting with AI, and exploring ways to make an impact.
+
+5. How has your career evolved over the years?
+   Starting with a lack of direction, I’ve gradually gained clarity and focus. My experiences have shaped me into someone ready to create meaningful change.
+
+<div class="tab" onclick="showTab('education')">Education & Skills</div>
+1. What educational background prepared you for your career?
+   - Polytechnic diploma in computer technology introduced me to foundational technical skills.
+   - Bachelor's in Computer Science and Engineering strengthened my technical knowledge.
+
+2. What technical or soft skills are most valuable to you?
+   Technical Skills:
+   - Programming languages (e.g., Python, Java, C++)
+   - AI and machine learning
+   - Web development
+   - Problem-solving and system design
+
+   Soft Skills:
+   - Adaptability
+   - Resilience
+   - Communication
+   - Curiosity and a growth mindset
+
+3. Are there any certifications or courses that helped you excel?
+   Yes, certifications in areas like AI, machine learning, and web development have been crucial. Online platforms and resources like Coursera, Udemy, and open-source projects have significantly contributed to my growth.
+
+4. What resources have impacted your learning?
+   - Open-source repositories like GitHub
+   - Educational platforms (e.g., Coursera, Khan Academy)
+   - Technical blogs and forums
+   - AI and tech communities for collaborative learning
+
+5. How do you keep up with trends in your industry?
+   - Following tech blogs, research papers, and industry news
+   - Attending webinars and hackathons
+   - Engaging in professional communities and networking
+
+<div class="tab" onclick="showTab('achievements')">Achievements</div>
+1. What is your proudest professional achievement?
+   Although I’m yet to have professional experience, creating innovative projects during my education and overcoming setbacks like the canceled MS admission have been pivotal moments of growth.
+
+2. Can you share a memorable project or experience you’ve worked on?
+   A portfolio project showcasing my journey creatively stands out. I themed it around an astronaut exploring the "Computer Science planet," symbolizing my passion for discovery and growth.
+
+3. Have you ever failed at something? How did you handle it, and what did you learn?
+   The canceled MS admission felt like a failure, but I used the time to reassess my goals and rediscover my passions. This taught me resilience and the importance of adaptability.
+
+4. What’s the most significant contribution you’ve made in your field?
+   As I’m early in my journey, my contributions so far have been personal—gaining knowledge, building projects, and preparing to make a larger impact.
+
+<div class="tab" onclick="showTab('future')">Future</div>
+1. What are your goals for the next five years?
+   - Establish a career in AI and technology.
+   - Work on projects with a significant social impact in India.
+   - Pursue certifications and possibly higher studies in cutting-edge fields.
+
+2. Are there any industries or roles you’d like to explore in the future?
+   - AI research and development
+   - Human-computer interaction
+   - Tech for social good
+
+3. How do you plan to stay relevant in your field over the years?
+   - Continuous learning and upskilling
+   - Networking and staying involved in industry discussions
+   - Building projects that solve real-world problems
+
+4. What trends do you think will shape your industry in the next decade?
+   - The growing role of AI in various domains
+   - Ethical AI and responsible technology
+   - Increased focus on sustainability and tech’s social impact
+
+5. What impact do you hope to make on the world through your work?
+   I aspire to harness technology, particularly AI, to solve critical problems, empower communities, and contribute to India’s technological and social progress.

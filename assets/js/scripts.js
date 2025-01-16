@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const answers = {
     "career": [
-        "I was inspired by [answer here].",
+        "Initially, I was drawn to commerce because of my love for math. By 10th grade, I knew I wanted a unique path—not mainstream options like engineering or medicine. While exploring opportunities, my father introduced me to polytechnic studies, which fit both financially and academically as a twin sibling. Initially, I aspired to aeronautical engineering but pivoted to computer technology upon realizing my aptitude and interest in it. My scores led me to a government engineering college in Nagpur, and though I didn't choose this path initially, it has since become my passion. After a gap year in 2024 to reassess my goals, I rediscovered my curiosity and passion, particularly inspired by the transformative potential of AI.",
         "My first steps were [answer here].",
         "A major turning point was [answer here].",
         "Challenges included [answer here].",
