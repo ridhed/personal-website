@@ -4,20 +4,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const answers = {
     "career": [
-        "Initially, I was drawn to commerce because of my love for math. By 10th grade, I knew I wanted a unique path—not mainstream options like engineering or medicine. While exploring opportunities, my father introduced me to polytechnic studies, which fit both financially and academically as a twin sibling. Initially, I aspired to aeronautical engineering but pivoted to computer technology upon realizing my aptitude and interest in it. My scores led me to a government engineering college in Nagpur, and though I didn't choose this path initially, it has since become my passion. After a gap year in 2024 to reassess my goals, I rediscovered my curiosity and passion, particularly inspired by the transformative potential of AI.",
-        "My first steps were [answer here].",
-        "A major turning point was [answer here].",
-        "Challenges included [answer here].",
-        "A typical day looks like [answer here]."
+        "I was initially drawn to commerce due to my love for math, but by 10th grade, I sought a unique path. My father introduced me to polytechnic studies, which fit academically and financially as a twin sibling. Initially aspiring to aeronautical engineering, I pivoted to computer technology due to my aptitude. My scores led me to a government engineering college in Nagpur. A gap year in 2024 reignited my curiosity and passion, especially for AI and its transformative potential.",
+        "A major turning point was the cancellation of my MS plans in Canada, which prompted me to refocus on creating a social impact through technology.",
+        "Challenges included educational confusion, the COVID-19 pandemic disrupting studies, canceled MS plans in Canada, and self-doubt. These obstacles helped me rediscover my drive.",
+        "Currently, I focus on upskilling, building projects, and networking within the tech industry, exploring AI and its applications daily.",
+        "I started with a lack of direction but have gradually gained clarity and focus, preparing to create meaningful change."
     ],
     "education": [
-        "My education background is [answer here].",
-        "The most valuable skills are [answer here].",
-        "Certifications like [answer here] helped.",
-        "Resources like [answer here] impacted me.",
-        "I keep up with trends by [answer here]."
+        "A polytechnic diploma in computer technology introduced me to technical fundamentals, while a bachelor's in Computer Science and Engineering solidified my knowledge.",
+        "Valuable skills include Python, MySQL, AI tools (Pandas, Scikit-learn, PyTorch), web development (HTML, Flask), and soft skills like communication, resilience, and curiosity.",
+        "Certifications like OdinSchool's Data Science program, TECHSAKSHAM, and SAP Conversational AI have been crucial in enhancing my technical expertise.",
+        "Resources like GitHub, Kaggle, YouTube, and educational platforms have significantly impacted my learning.",
+        "I keep up with trends by following tech blogs, attending webinars, and staying active on platforms like Twitter and LinkedIn."
     ],
+    "achievements": [
+        "My proudest achievement is overcoming setbacks like canceled MS plans to realign my goals and build impactful projects.",
+        "A memorable project is 'Accumulated Report Analysis of Youth (A-RAY),' which used AI to analyze student stress during the pandemic, achieving 97% training accuracy in sentiment analysis.",
+        "Failing to pursue an MS in Canada taught me resilience and adaptability, motivating me to focus on local impact through technology.",
+        "My contributions so far include knowledge-building and projects aimed at solving real-world problems, like student mental health analysis.",
+        "My career has evolved from uncertainty to a focus on leveraging AI to create meaningful social change."
+    ],
+    "future": [
+        "In the next five years, I aim to establish a career in AI, work on socially impactful projects, and possibly pursue higher studies in cutting-edge fields.",
+        "I’m interested in roles like Machine Learning Engineer, AI Developer, and Lecturer, focusing on tech for social good.",
+        "I plan to stay relevant through continuous learning, networking, and building impactful projects.",
+        "Key trends shaping my industry include ethical AI, sustainability, and AI-driven innovation across domains.",
+        "I aspire to harness AI to solve critical problems, empower communities, and contribute to India's progress by sharing knowledge and fostering innovation."
+    ]
 };
+
 
 function showAnswer() {
     const activeTab = document.querySelector(".questions-container.active");
