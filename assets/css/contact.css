@@ -1,0 +1,243 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between hamburger and nav links */
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border-bottom: 3px solid #0099ff;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+    border-color: #fff;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover div {
+    background-color: #0099ff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        display: none; /* Hidden by default for mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        padding: 15px 0;
+        border-top: 3px solid #0099ff;
+        z-index: 10;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+    .nav-links {
+        display: flex; /* Always display nav-links on larger screens */
+        position: static; /* Reset position */
+        flex-direction: row; /* Horizontal alignment */
+        gap: 25px; /* Maintain spacing */
+        padding: 0; /* No additional padding */
+    }
+}
+
+
+/* Adjust Navbar */
+.navbar {
+    justify-content: space-between; /* Space between hamburger and nav links */
+}
+
+/* Add animation on open/close */
+.hamburger div:nth-child(1) {
+    transform-origin: top left;
+}
+.hamburger div:nth-child(3) {
+    transform-origin: bottom left;
+}
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contact Card */
+.contact-card {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.front, .back {
+    width: 48%;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.front h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+}
+
+.front p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Back of the Card */
+.back h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #0099ff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+.back button {
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back button:hover {
+    background-color: #0077cc;
+}
+
+.social-links a {
+    color: #0099ff;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+.social-links a {
+    margin: 0 10px;
+}
+.social-links img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+}

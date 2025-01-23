@@ -23,7 +23,7 @@ body {
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between hamburger and nav links */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background: rgba(0, 0, 0, 0.8);
@@ -66,7 +66,7 @@ body {
 
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hidden by default for larger screens */
+    display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
         display: flex;
     }
     .nav-links {
-        display: none; /* Hidden by default for mobile */
+        display: none;
         position: absolute;
         top: 60px;
         left: 0;
@@ -114,39 +114,176 @@ body {
 /* Desktop View */
 @media (min-width: 769px) {
     .hamburger {
-        display: none; /* Hide hamburger on larger screens */
+        display: none;
     }
     .nav-links {
-        display: flex; /* Always display nav-links on larger screens */
-        position: static; /* Reset position */
-        flex-direction: row; /* Horizontal alignment */
-        gap: 25px; /* Maintain spacing */
-        padding: 0; /* No additional padding */
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 25px;
+        padding: 0;
     }
 }
 
-
-/* Adjust Navbar */
-.navbar {
-    justify-content: space-between; /* Space between hamburger and nav links */
+/* ID Card Styling */
+.id-card {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    perspective: 1000px;
 }
 
-/* Add animation on open/close */
-.hamburger div:nth-child(1) {
-    transform-origin: top left;
+.card {
+    width: 300px;
+    height: 450px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
 }
-.hamburger div:nth-child(3) {
-    transform-origin: bottom left;
+
+.card.flip {
+    transform: rotateY(180deg);
 }
-.hamburger.active div:nth-child(1) {
-    transform: rotate(45deg);
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
-.hamburger.active div:nth-child(2) {
-    opacity: 0;
+
+.front {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
 }
-.hamburger.active div:nth-child(3) {
-    transform: rotate(-45deg);
+
+.front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
+
+.front h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #0099ff;
+}
+
+.front p {
+    font-size: 1rem;
+}
+
+.accounts a {
+    display: block;
+    margin: 10px 0;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.accounts a:hover {
+    color: #ffffff;
+}
+
+/* Back of the Card */
+.back {
+    background-color: #222;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.back h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #0099ff;
+}
+
+.get-in-touch {
+    background-color: #0099ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.get-in-touch:hover {
+    background-color: #007acc;
+}
+
+/* Flip Icon Button */
+.flip-icon {
+    background-color: #0099ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.flip-icon:hover {
+    background-color: #007acc;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.contact-form label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact-form button {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #007acc;
+}
+
+.hidden {
+    display: none;
+}
+
 .screen-container {
     position: absolute;
     top: 100px;
