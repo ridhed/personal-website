@@ -208,20 +208,6 @@ body {
     text-decoration: underline;
 }
 
-.back button {
-    background-color: #0099ff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.back button:hover {
-    background-color: #0077cc;
-}
-
 .social-links a {
     color: #0099ff;
     margin-right: 10px;
