@@ -3,44 +3,34 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
+    color: #d0eef4;
+    background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
+    background-color: #051026;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Container */
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    overflow-x: hidden;
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between hamburger and nav links */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    background: rgba(5, 16, 38, 0.8);
+    box-shadow: 0 2px 10px rgba(208, 238, 244, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
     transition: background-color 0.3s ease;
-    border-bottom: 3px solid #0099ff;
+    border-bottom: 3px solid #37a7e1;
 }
 
 .navbar:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(5, 16, 38, 0.9); 
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -50,7 +40,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #d0eef4;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.1rem;
     padding: 8px 15px;
@@ -60,8 +50,8 @@ body {
 }
 
 .nav-links li a:hover {
-    background-color: #575757;
-    border-color: #fff;
+    background-color: #1751b7; 
+    border-color: #d0eef4; 
 }
 
 /* Hamburger Icon */
@@ -147,6 +137,7 @@ body {
 .hamburger.active div:nth-child(3) {
     transform: rotate(-45deg);
 }
+
 
 /* Main Content */
 .main-content {

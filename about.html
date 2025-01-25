@@ -1,16 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Riddhi Jayant Hedaoo</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/about_styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
-<body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
-    <div class="container">
+
+<body
+    style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="hamburger" onclick="toggleMenu()">
@@ -18,85 +23,37 @@
             <div></div>
             <div></div>
         </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="project.html">PROJECTS</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                </ul>
-            </nav>
-        </header>   
-
-        <div class="screen-container">
-            <!-- Screen Title Bar -->
-            <div class="screen-title-bar">
-                <p class="title">aboutme.ask</p>
-                <div class="social-buttons">
-                    <a href="https://x.com/RiddhiXAI" target="_blank" class="social-button" title="Twitter">
-                        <img src="assets/images/icons/twitter-icon.png" alt="Twitter">
-                    </a>
-                    <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank" class="social-button" title="LinkedIn">
-                        <img src="assets/images/icons/linkedin-icon.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/ridhed" target="_blank" class="social-button" title="GitHub">
-                        <img src="assets/images/icons/github-icon.png" alt="GitHub">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab active" onclick="showTab('career')">Career Journey</div>
-                <div class="tab" onclick="showTab('education')">Education & Skills</div>
-                <div class="tab" onclick="showTab('achievements')">Achievements</div>
-                <div class="tab" onclick="showTab('future')">Future</div>
-            </div>
-
-            <!-- Questions -->
-            <div id="career" class="questions-container active">
-                <p class="question">1. What inspired you to choose your career path?</p>
-                <p class="question">2. Can you describe a major turning point in your career?</p>
-                <p class="question">3. What challenges did you face early in your career?</p>
-                <p class="question">4. What does a typical day in your life look like?</p>
-            </div>
-            <div id="education" class="questions-container">
-                <p class="question">1. What educational background prepared you for your career?</p>
-                <p class="question">2. What technical or soft skills are most valuable to you?</p>
-                <p class="question">3. Are there any certifications or courses that helped you excel?</p>
-                <p class="question">4. What resources have impacted your learning?</p>
-                <p class="question">5. How do you keep up with trends in your industry?</p>
-            </div>
-            <div id="achievements" class="questions-container">
-                <p class="question">1. What is your proudest professional achievement?</p>
-                <p class="question">2. Can you share a memorable project or experience you’ve worked on?</p>
-                <p class="question">3. Have you ever failed at something? How did you handle it, and what did you learn?</p>
-                <p class="question">4. What’s the most significant contribution you’ve made in your field?</p>
-                <p class="question">5. How has your career evolved over the years?</p>
-            </div>
-            <div id="future" class="questions-container">
-                <p class="question">1. What are your goals for the next five years?</p>
-                <p class="question">2. Are there any industries or roles you’d like to explore in the future?</p>
-                <p class="question">3. How do you plan to stay relevant in your field over the years?</p>
-                <p class="question">4. What trends do you think will shape your industry in the next decade?</p>
-                <p class="question">5. What impact do you hope to make on the world through your work?</p>
-            </div>
-            <!-- Chatbox container -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="project.html">PROJECTS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Chatbot Container -->
+        <div class="chatbot-container">
+            <!-- Chatbox -->
             <div id="chat-box">
-                <!-- Bot's messages -->
+                <!-- Bot's initial messages -->
                 <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!</p>
-                <p class="bot-message"><span class="bold-text">Bot:</span> Curious about what fueled my journey to this distant world? Ask me about my passion and the path that led me here!</p>
-            </div>     
-
-            <!-- Input area -->
-            <div class="input-area">
-                <input type="text" id="user-input" placeholder="Ask a question..." onkeydown="checkEnter(event)" />
-                <button onclick="showAnswer()">Send</button>
+                <p class="bot-message"><span class="bold-text">Bot:</span> Would you like to know more about me? Type
+                    <span class="highlight">topics</span> to see available topics.</p>
             </div>
 
+            <!-- Input Area -->
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your message..." onkeydown="checkEnter(event)" />
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
     <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>

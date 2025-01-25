@@ -2,6 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Welcome to Riddhi Hedaoo's portfolio!");
 });
 
+const topics = {
+    "career": [
+        "1. What inspired you to choose your career path?",
+        "2. Can you describe a major turning point in your career?",
+        "3. What challenges did you face early in your career?",
+        "4. What does a typical day in your life look like?"
+    ],
+    "education": [
+        "1. What educational background prepared you for your career?",
+        "2. What technical or soft skills are most valuable to you?",
+        "3. Are there any certifications or courses that helped you excel?",
+        "4. What resources have impacted your learning?",
+        "5. How do you keep up with trends in your industry?"
+    ],
+    "achievements": [
+        "1. What is your proudest professional achievement?",
+        "2. Can you share a memorable project or experience you’ve worked on?",
+        "3. Have you ever failed at something? How did you handle it, and what did you learn?",
+        "4. What’s the most significant contribution you’ve made in your field?",
+        "5. How has your career evolved over the years?"
+    ],
+    "future": [
+        "1. What are your goals for the next five years?",
+        "2. Are there any industries or roles you’d like to explore in the future?",
+        "3. How do you plan to stay relevant in your field over the years?",
+        "4. What trends do you think will shape your industry in the next decade?",
+        "5. What impact do you hope to make on the world through your work?"
+    ]
+};
+
 const answers = {
     "career": [
         "I was initially drawn to commerce due to my love for math, but by 10th grade, I sought a unique path. My father introduced me to polytechnic studies, which fit academically and financially as a twin sibling. Initially aspiring to aeronautical engineering, I pivoted to computer technology due to my aptitude. My scores led me to a government engineering college in Nagpur. A gap year in 2024 reignited my curiosity and passion, especially for AI and its transformative potential.",
@@ -33,75 +63,62 @@ const answers = {
     ]
 };
 
+let currentTopic = null;
 
-function showAnswer() {
-    const activeTab = document.querySelector(".questions-container.active");
-    const userInput = document.getElementById("user-input").value.trim();
+function sendMessage() {
+    const userInput = document.getElementById("user-input").value.trim().toLowerCase();
     const chatBox = document.getElementById("chat-box");
 
-    if (activeTab && userInput) {
-        // Find the currently selected question in the active tab
-        const questions = activeTab.querySelectorAll(".question");
-        const selectedQuestion = questions[userInput - 1]?.textContent || "Sorry, I don't have that question.";
+    if (!userInput) return; // Exit if input is empty
 
-        // Display user message (the selected question)
-        chatBox.innerHTML += `
-            <div class="user-message">
-                <span class="bold-text">You:</span> ${selectedQuestion}
-            </div>`;
-        
-        // Display bot's response
-        if (answers[activeTab.id] && answers[activeTab.id][userInput - 1]) {
-            chatBox.innerHTML += `
-                <div class="bot-message">
-                    <span class="bold-text">Bot:</span> ${answers[activeTab.id][userInput - 1]}
-                </div>`;
+    // Display user's message
+    const userMessage = document.createElement('div');
+    userMessage.classList.add('user-message');
+    userMessage.innerHTML = `<span class="bold-text">You:</span> ${userInput}`;
+    chatBox.appendChild(userMessage);
+
+    // Bot's response logic
+    if (userInput === "topics") {
+        const topicList = Object.keys(topics).join(", ");
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('bot-message');
+        botMessage.innerHTML = `<span class="bold-text">Bot:</span> Available topics: <span class="topic">${topicList}</span>. Type a topic to see questions.`;
+        chatBox.appendChild(botMessage);
+    } else if (Object.keys(topics).includes(userInput)) {
+        currentTopic = userInput;
+        const questions = topics[userInput].join("<br>");
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('bot-message');
+        botMessage.innerHTML = `<span class="bold-text">Bot:</span> Here are the questions for <span class="topic">${userInput}</span>:<br><span class="question">${questions}</span><br>Type the question number to get the answer.`;
+        chatBox.appendChild(botMessage);
+    } else if (currentTopic && !isNaN(userInput)) {
+        const questionIndex = parseInt(userInput) - 1;
+        if (answers[currentTopic] && answers[currentTopic][questionIndex]) {
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('bot-message');
+            botMessage.innerHTML = `<span class="bold-text">Bot:</span> <span class="answer">${answers[currentTopic][questionIndex]}</span>`;
+            chatBox.appendChild(botMessage);
         } else {
-            // Default message if no answer is found
-            chatBox.innerHTML += `
-                <div class="bot-message">
-                    <span class="bold-text">Bot:</span> Sorry, I don't have an answer for that.
-                </div>`;
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('bot-message');
+            botMessage.innerHTML = `<span class="bold-text">Bot:</span> <span class="error">Sorry, I don't have an answer for that.</span>`;
+            chatBox.appendChild(botMessage);
         }
-        
-        // Scroll to the bottom of the chat
-        chatBox.scrollTop = chatBox.scrollHeight;
-
-        // Clear the input field
-        document.getElementById("user-input").value = '';
+    } else {
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('bot-message');
+        botMessage.innerHTML = `<span class="bold-text">Bot:</span> <span class="instruction">I didn't understand that. Type <span class="highlight">topics</span> to see available topics.</span>`;
+        chatBox.appendChild(botMessage);
     }
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Default to the Career tab when the page loads
-    showTab('career');
-});
-
-function showTab(tabId) {
-    // Get all tabs and remove the 'active' class from them
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-
-    // Add 'active' class to the clicked tab
-    const clickedTab = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
-    clickedTab.classList.add('active');
-
-    // Hide all question containers and show the selected one
-    const questionContainers = document.querySelectorAll('.questions-container');
-    questionContainers.forEach(container => {
-        container.classList.remove('active');
-    });
-
-    // Show the selected question container
-    const selectedTab = document.getElementById(tabId);
-    selectedTab.classList.add('active');
+    // Clear input field and scroll to bottom
+    document.getElementById("user-input").value = '';
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function checkEnter(event) {
     if (event.key === 'Enter') {
-        showAnswer();
+        sendMessage();
     }
 }
 

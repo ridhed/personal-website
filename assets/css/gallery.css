@@ -3,44 +3,34 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    background-image: linear-gradient(to bottom, rgba(10, 14, 33, 0.9), rgba(0, 0, 0, 0.9)), url('assets/images/planet_surface.jpg');
+    color: #d0eef4;
+    background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
+    background-color: #051026;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Container */
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    overflow-x: hidden;
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between hamburger and nav links */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    background: rgba(5, 16, 38, 0.8);
+    box-shadow: 0 2px 10px rgba(208, 238, 244, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
     transition: background-color 0.3s ease;
-    border-bottom: 3px solid #0099ff;
+    border-bottom: 3px solid #37a7e1;
 }
 
 .navbar:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(5, 16, 38, 0.9); 
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -50,7 +40,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #d0eef4;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.1rem;
     padding: 8px 15px;
@@ -60,8 +50,8 @@ body {
 }
 
 .nav-links li a:hover {
-    background-color: #575757;
-    border-color: #fff;
+    background-color: #1751b7; 
+    border-color: #d0eef4; 
 }
 
 /* Hamburger Icon */
@@ -148,88 +138,96 @@ body {
     transform: rotate(-45deg);
 }
 
-/* Main Container */
+
+
+/* Gallery Container */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin: 80px auto 0 auto; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 100px 20px 20px;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-/* Individual Photo Cards */
+/* Photo Card */
 .photo-card {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.4);
 }
 
 .photo-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
 }
 
 .photo-card img {
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    filter: brightness(0.8); 
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.photo-card .photo-overlay {
+.photo-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Photo Overlay */
+.photo-overlay {
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
-    color: #ffffff;
-    font-size: 14px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
+    transition: bottom 0.3s ease;
 }
 
+.photo-card:hover .photo-overlay {
+    bottom: 0;
+}
+
+.song-title {
+    font-size: 0.9em;
+    color: #0099ff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.song-title i {
+    margin-right: 8px;
+}
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 14px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 3px solid #0099ff;
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    color: #0099ff;
 }
 
-/* Image */
-img {
-    pointer-events: none;
-    -webkit-user-drag: none;
-}
-
-/* Image Song Title */
-.song-title {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    color: #fff;
-}
-
-/* Animation for floating photo cards */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 153, 255, 0.8), 0 0 30px rgba(0, 153, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+    }
 }
 
 .photo-card {
-    animation: float 3s ease-in-out infinite;
+    animation: glow 3s infinite;
 }
-
