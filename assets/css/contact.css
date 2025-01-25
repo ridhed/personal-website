@@ -3,12 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #d0eef4;
+    color: #d0eef4; /* Link Water */
     background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: #051026;
+    background-color: #051026; /* Black Pearl */
     height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navigation Bar */
@@ -17,18 +20,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(5, 16, 38, 0.8);
-    box-shadow: 0 2px 10px rgba(208, 238, 244, 0.1);
+    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
+    box-shadow: 0 2px 10px rgba(208, 238, 244, 0.1); /* Link Water shadow */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    border-bottom: 3px solid #37a7e1;
+    border-bottom: 3px solid #37a7e1; /* Picton Blue */
 }
 
 .navbar:hover {
-    background-color: rgba(5, 16, 38, 0.9); 
+    background-color: rgba(5, 16, 38, 0.9); /* Darker Black Pearl */
 }
 
 .nav-links {
@@ -40,7 +43,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #d0eef4;
+    color: #d0eef4; /* Link Water */
     font-family: 'Orbitron', sans-serif;
     font-size: 1.1rem;
     padding: 8px 15px;
@@ -50,8 +53,8 @@ body {
 }
 
 .nav-links li a:hover {
-    background-color: #1751b7; 
-    border-color: #d0eef4; 
+    background-color: #1751b7; /* Denim */
+    border-color: #d0eef4; /* Link Water */
 }
 
 /* Hamburger Icon */
@@ -70,13 +73,13 @@ body {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #d0eef4; /* Link Water */
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .hamburger:hover div {
-    background-color: #0099ff;
+    background-color: #37a7e1; /* Picton Blue */
 }
 
 /* Mobile View */
@@ -89,11 +92,11 @@ body {
         position: absolute;
         top: 60px;
         left: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(5, 16, 38, 0.9); /* Black Pearl with transparency */
         width: 100%;
         flex-direction: column;
         padding: 15px 0;
-        border-top: 3px solid #0099ff;
+        border-top: 3px solid #37a7e1; /* Picton Blue */
         z-index: 10;
     }
     .nav-links.active {
@@ -104,40 +107,26 @@ body {
 /* Desktop View */
 @media (min-width: 769px) {
     .hamburger {
-        display: none; /* Hide hamburger on larger screens */
+        display: none;
     }
     .nav-links {
-        display: flex; /* Always display nav-links on larger screens */
-        position: static; /* Reset position */
-        flex-direction: row; /* Horizontal alignment */
-        gap: 25px; /* Maintain spacing */
-        padding: 0; /* No additional padding */
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 25px;
+        padding: 0;
     }
 }
 
-
-/* Adjust Navbar */
-.navbar {
-    justify-content: space-between; /* Space between hamburger and nav links */
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px; /* Adjust for fixed navbar */
 }
-
-/* Add animation on open/close */
-.hamburger div:nth-child(1) {
-    transform-origin: top left;
-}
-.hamburger div:nth-child(3) {
-    transform-origin: bottom left;
-}
-.hamburger.active div:nth-child(1) {
-    transform: rotate(45deg);
-}
-.hamburger.active div:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active div:nth-child(3) {
-    transform: rotate(-45deg);
-}
-
 
 /* Contact Section */
 .contact {
@@ -146,7 +135,6 @@ body {
     align-items: center;
     width: 100%;
     max-width: 300px;
-    margin-top: 65px; 
 }
 
 .contact-card {
@@ -158,9 +146,9 @@ body {
     transition: transform 0.6s;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.8);
-    border: 2px solid #0099ff;
+    border: 2px solid #37a7e1; /* Picton Blue */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+    box-shadow: 0 0 20px rgba(55, 167, 225, 0.5); /* Picton Blue shadow */
 }
 
 .contact-card:hover {
@@ -191,34 +179,36 @@ body {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 2px solid #0099ff;
-    box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+    border: 2px solid #37a7e1; /* Picton Blue */
+    box-shadow: 0 0 10px rgba(55, 167, 225, 0.5); /* Picton Blue shadow */
 }
 
 .front h2 {
     font-size: 1.4em;
     margin: 10px 0;
-    color: #0099ff;
+    color: #37a7e1; /* Picton Blue */
 }
 
 .front p {
     font-size: 1em;
     margin: 5px 0;
-    color: #fff;
+    color: #d0eef4; /* Link Water */
 }
+
 .instruction {
     font-size: 0.9em;
-    color: #0099ff;
+    color: #37a7e1; /* Picton Blue */
     opacity: 0.7;
     margin-top: 15px;
     transition: opacity 0.3s ease;
     font-family: 'Roboto', sans-serif;
-    text-align: center; 
+    text-align: center;
 }
 
 .front:hover .instruction {
     opacity: 1;
 }
+
 .back {
     background: rgba(0, 0, 0, 0.9);
     transform: rotateY(180deg);
@@ -227,23 +217,23 @@ body {
 .back h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #0099ff;
+    color: #37a7e1; /* Picton Blue */
 }
 
 .back p {
     font-size: 1em;
     margin: 5px 0;
-    color: #fff;
+    color: #d0eef4; /* Link Water */
 }
 
 .back a {
-    color: #0099ff;
+    color: #37a7e1; /* Picton Blue */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .back a:hover {
-    color: #ffffff;
+    color: #d0eef4; /* Link Water */
 }
 
 .social-links {
@@ -265,13 +255,13 @@ body {
 /* Glow Animation */
 @keyframes glow {
     0% {
-        box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+        box-shadow: 0 0 10px rgba(55, 167, 225, 0.5); /* Picton Blue shadow */
     }
     50% {
-        box-shadow: 0 0 20px rgba(0, 153, 255, 0.8), 0 0 30px rgba(0, 153, 255, 0.6);
+        box-shadow: 0 0 20px rgba(55, 167, 225, 0.8), 0 0 30px rgba(55, 167, 225, 0.6); /* Picton Blue shadow */
     }
     100% {
-        box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+        box-shadow: 0 0 10px rgba(55, 167, 225, 0.5); /* Picton Blue shadow */
     }
 }
 
