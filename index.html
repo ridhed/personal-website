@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Explorer Portfolio</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
+
+<body
+    style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000;">
     <div class="container">
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">HOME</a></li>
@@ -27,33 +31,67 @@
                     <li><a href="gallery.html">GALLERY</a></li>
                 </ul>
             </nav>
-        </header>     
-        <!-- Welcome Message -->
-        <main class="main-content">
-            <section class="welcome-section">
-                <div class="text-content">
-                    <h1>Welcome, Explorer!</h1>
-                    <p class="intro-text">You’ve landed on the planet of <strong>Riddhi Hedaoo</strong>. Explore my projects and skills as I terraform my ideas into reality.</p>
-                    <a href="assets/documents/Resume.pdf" class="btn">Download CV</a>
+        </header>
+
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <!-- Slide 1: Landing on the Planet -->
+            <div class="slide active">
+                <h1>🚀 Explorer Log: Riddhi Hedaoo's Mission to Planet CS</h1>
+                <p><strong>Log Entry:</strong> "I’ve landed on a mysterious and uncharted world called Planet CS. My
+                    mission is to explore its vast landscapes, uncover its secrets, and extract valuable treasures that
+                    will shape my journey. The planet awaits my curiosity and creativity!"</p>
+                <p><em>As a visitor, you’re about to witness Riddhi’s journey through her mission logs. Prepare to
+                        explore the treasures she’s discovered and the legacy she’s building.</em></p>
+                <div class="slide-buttons">
+                    <button class="back-btn" disabled>Back</button>
+                    <button class="next-btn">Access Mission Logs</button>
                 </div>
-                <div class="image-content">
-                    <a href="https://ridhed.github.io/personal-website/about.html">
-                        <img src="assets/images/background/female_astronaut.png" alt="Astronaut on Planet" class="hero-image">
-                    </a>
-                </div>                
-            </section>
-        </main>
-            <!-- Footer -->
-            <footer>
-                <div>
-                    <a href="https://x.com/RiddhiXAI" target="_blank">Twitter</a> | 
-                    <a href="https://github.com/ridhed" target="_blank">GitHub</a> | 
-                    <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank">LinkedIn</a>
+            </div>
+
+            <!-- Slide 2: Discovering Treasures (Tabs) -->
+            <div class="slide">
+                <h1>🌌 Explorer Log: Treasures Unearthed by Riddhi Hedaoo</h1>
+                <p><strong>Log Entry:</strong> "Through my tireless exploration and terraforming efforts, I’ve
+                    discovered incredible treasures that define my journey on Planet CS. Each gem represents a milestone
+                    in my adventure. Here’s what I’ve found so far:"</p>
+                <div class="treasures">
+                    <a href="https://ridhed.github.io/personal-website/project.html" class="treasure">🚀 <strong>Projects</strong> - My innovative creations that
+                        breathe life into the planet.</a>
+                    <a href="https://ridhed.github.io/personal-website/gallery.html" class="treasure">📸 <strong>Gallery</strong> - A visual journey through my
+                        explorations and achievements.</a>
+                    <a href="https://ridhed.github.io/personal-website/project.html" class="treasure">👩‍🚀 <strong>About</strong> - My journey, from career
+                        inspirations to future aspirations.</a>
+                    <a href="https://ridhed.github.io/personal-website/contact.html" class="treasure">📡 <strong>Contact</strong> - A beacon to connect with
+                        fellow explorers.</a>
                 </div>
-                <p>&copy; 2025 Riddhi Hedaoo. All Rights Reserved.</p>
-            </footer>
+                <p><em>As a visitor, you can explore these treasures to understand how Riddhi has transformed Planet
+                        CS.</em></p>
+                <div class="slide-buttons">
+                    <button class="back-btn">Back</button>
+                    <button class="next-btn">Continue to Mission Summary</button>
+                </div>
+            </div>
+
+            <!-- Slide 3: Call to Action -->
+            <div class="slide">
+                <h1>🌟 Explorer Log: Terraforming Legacy</h1>
+                <p><strong>Log Entry:</strong> "I’ve only just begun to unlock the potential of Planet CS. The treasures
+                    I’ve discovered are the foundation of my legacy. Dive deeper into my projects to see how I’ve
+                    transformed these gems into real-world solutions and innovations."</p>
+                <div class="cta-buttons">
+                    <button class="btn" onclick="window.location.href='assets/documents/Resume.pdf'" download>Download My Explorer's Log (Resume)</button>
+                </div>
+                <p><em>Curious about my journey? Check out my <a href="about.html" class="highlight">About</a> page to
+                        learn more about my career, education, achievements, and future goals!</em></p>
+                <div class="slide-buttons">
+                    <button class="back-btn">Back</button>
+                    <button class="next-btn" disabled>Next</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Scripts -->
+    <!-- JavaScript -->
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>

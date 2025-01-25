@@ -7,11 +7,9 @@ body {
     background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: #051026; /* Black Pearl */
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block; /* Changed from flex to block */
     perspective: 1000px; /* For 3D effects */
 }
 
@@ -203,16 +201,21 @@ body::before {
     background: #1751b7; /* Denim */
 }
 
-
+/* Main Content Wrapper */
+.main-content {
+    padding-top: 100px; /* Add padding to avoid navbar overlap */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* Gallery Container */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
-    padding: 100px 20px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 50px; /* Adjusted padding */
+    margin:  auto;
 }
 
 /* Photo Card */
@@ -221,8 +224,9 @@ body::before {
     overflow: hidden;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 100px;
 }
 
 .photo-card:hover {
@@ -252,6 +256,7 @@ body::before {
     padding: 10px;
     text-align: center;
     transition: bottom 0.3s ease;
+    z-index: 2;
 }
 
 .photo-card:hover .photo-overlay {
@@ -278,6 +283,7 @@ footer {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.9em;
     color: #0099ff;
+    width: 100%;
 }
 
 /* Glow Animation */

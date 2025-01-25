@@ -48,7 +48,7 @@ const answers = {
         "I keep up with trends by following tech blogs, attending webinars, and staying active on platforms like Twitter and LinkedIn."
     ],
     "achievements": [
-        "My proudest achievement is overcoming setbacks like canceled MS plans to realign my goals and build impactful projects.",
+        "My proudest achievement is getting first class distinction in both my degress (Diploma & B.E) plus getting Second University ranker in B.E",
         "A memorable project is 'Accumulated Report Analysis of Youth (A-RAY),' which used AI to analyze student stress during the pandemic, achieving 97% training accuracy in sentiment analysis.",
         "Failing to pursue an MS in Canada taught me resilience and adaptability, motivating me to focus on local impact through technology.",
         "My contributions so far include knowledge-building and projects aimed at solving real-world problems, like student mental health analysis.",
@@ -141,4 +141,31 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Script loaded successfully.");
 });
 
+const slides = document.querySelectorAll('.slide');
+const nextButtons = document.querySelectorAll('.next-btn');
+const backButtons = document.querySelectorAll('.back-btn');
+let currentSlide = 0;
 
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+nextButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    });
+});
+
+backButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    });
+});

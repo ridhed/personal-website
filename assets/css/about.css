@@ -203,6 +203,31 @@ body::before {
     background: #1751b7; /* Denim */
 }
 
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    z-index: 1; /* Ensure it's below the navbar */
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
 
 /* Chatbot Container */
 .chatbot-container {
