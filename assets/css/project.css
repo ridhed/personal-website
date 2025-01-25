@@ -1,18 +1,15 @@
-/* General Styling */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
-    color: #d0eef4; /* Link Water */
+    padding: 80px 0 0; 
+    font-family: 'Orbitron', sans-serif;
+    color: #d0eef4;
     background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: #051026; /* Black Pearl */
-    height: 100vh;
+    background-color: #051026;
+    min-height: 100vh;
     overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px; /* For 3D effects */
+    display: block;
+    perspective: 1000px;
 }
 
 /* Futuristic Glow Effect */
@@ -165,6 +162,19 @@ body::before {
         box-shadow: 0 0 10px rgba(55, 167, 225, 0.8); /* Stronger glow */
     }
 
+    /* Cross Icon when Active */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .nav-links {
         display: none; /* Hidden by default for mobile */
         position: absolute;
@@ -204,127 +214,126 @@ body::before {
 }
 
 
-
 /* Projects Section */
 .projects-section {
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    width: 100%;
+    max-width: 1400px; /* Increased max-width for better spacing */
+    padding: 10px 10px 20px; /* Adjusted padding to account for fixed navbar */
+    margin: 0 auto;
 }
 
 .project-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 30px; /* Spacing between cards */
+    padding: 20px;
 }
 
-.project-card {
-    background: linear-gradient(145deg, rgba(0, 0, 0, 0.9), rgba(0, 50, 80, 0.8));
-    border: 1px solid 0099ff;
-    border-radius: 12px;
+/* Project Card with Monitor Effect */
+.project-card.monitor {
+    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
+    border: 2px solid #37a7e1; /* Picton Blue */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(55, 167, 225, 0.5); /* Picton Blue shadow */
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
-    width: 300px;
-    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 89, 255, 0.7);
+.project-card.monitor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(55, 167, 225, 0.8); /* Brighter Picton Blue shadow */
 }
 
-.monitor .screen {
+/* Monitor Screen */
+.project-card.monitor .screen {
     position: relative;
-    overflow: hidden;
-    border-radius: 12px 12px 0 0;
+    padding: 10px;
+    background: #000; /* Black */
+    border-bottom: 2px solid #37a7e1; /* Picton Blue */
 }
 
-.monitor .screen img {
+.project-card.monitor .screen img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
+    height: auto;
+    border-radius: 10px;
 }
 
-.info {
-    padding: 15px;
+/* Monitor Info */
+.project-card.monitor .info {
+    padding: 20px;
     text-align: center;
 }
 
-.info h2 {
+.project-card.monitor .info h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #37a7e1; /* Picton Blue */
     font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
-    color: white;
-    margin-bottom: 10px;
 }
 
-.info p {
-    font-size: 14px;
-    color: white;
-    margin-bottom: 10px;
+.project-card.monitor .info p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #d0eef4; /* Link Water */
 }
 
-.info a {
-    font-family: 'Orbitron', sans-serif;
+.project-card.monitor .info a {
     display: inline-block;
-    color: cyan;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #37a7e1; /* Picton Blue */
+    color: #051026; /* Black Pearl */
     text-decoration: none;
-    border: 1px solid cyan;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    transition: background 0.3s ease;
 }
 
-.info a:hover {
-    background-color: cyan;
-    color: black;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 50px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
-}
-
-footer a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer p {
-    margin-top: 10px;
+.project-card.monitor .info a:hover {
+    background: #1751b7; /* Denim */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .projects-section {
-        flex-direction: column;
+        padding: 100px 10px 10px; /* Reduced padding for smaller screens */
     }
 
-    .project-card {
-        width: 100%;
+    .project-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards for mobile */
+        gap: 15px; /* Reduced gap for smaller screens */
     }
+
+    .project-card.monitor .info h2 {
+        font-size: 1.3em; /* Smaller heading for mobile */
+    }
+
+    .project-card.monitor .info p {
+        font-size: 0.9em; /* Smaller text for mobile */
+    }
+
+    .project-card.monitor .info a {
+        padding: 8px 16px; /* Smaller button for mobile */
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
+    border-top: 3px solid #37a7e1; /* Picton Blue */
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    color: #d0eef4; /* Link Water */
+}
+
+footer a {
+    color: #37a7e1; /* Picton Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #1751b7; /* Denim */
 }

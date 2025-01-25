@@ -162,6 +162,19 @@ body::before {
         box-shadow: 0 0 10px rgba(55, 167, 225, 0.8); /* Stronger glow */
     }
 
+    /* Cross Icon when Active */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .nav-links {
         display: none; /* Hidden by default for mobile */
         position: absolute;

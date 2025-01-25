@@ -1,16 +1,15 @@
-/* General Styling */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
-    color: #d0eef4; /* Link Water */
+    padding: 80px 0 0; 
+    font-family: 'Orbitron', sans-serif;
+    color: #d0eef4;
     background: url('assets/images/background/space-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: #051026; /* Black Pearl */
-    min-height: 100vh; /* Changed from height to min-height */
+    background-color: #051026;
+    min-height: 100vh;
     overflow-x: hidden;
-    display: block; /* Changed from flex to block */
-    perspective: 1000px; /* For 3D effects */
+    display: block;
+    perspective: 1000px;
 }
 
 /* Futuristic Glow Effect */
@@ -163,6 +162,19 @@ body::before {
         box-shadow: 0 0 10px rgba(55, 167, 225, 0.8); /* Stronger glow */
     }
 
+    /* Cross Icon when Active */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .nav-links {
         display: none; /* Hidden by default for mobile */
         position: absolute;
@@ -200,6 +212,7 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
     background: #1751b7; /* Denim */
 }
+
 
 /* Main Content Wrapper */
 .main-content {
