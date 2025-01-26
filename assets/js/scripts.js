@@ -169,3 +169,5 @@ backButtons.forEach(button => {
         }
     });
 });
+
+document.addEventListener('dragstart', event => event.preventDefault());
