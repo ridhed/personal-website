@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Welcome to the portfolio!");
+    console.log("Welcome to my portfolio!");
 });
 
 const topics = {
@@ -34,34 +34,35 @@ const topics = {
 
 const answers = {
     "career": [
-        "My interest in problem-solving and technology inspired me to pursue a career in computer science. Over time, I found myself drawn toward the transformative potential of artificial intelligence.",
-        "A major turning point was shifting focus from traditional career plans to exploring AI-driven solutions with the potential for social impact.",
-        "Early challenges included navigating uncertainty, adapting during the pandemic, and overcoming self-doubt. These experiences strengthened resilience and clarified my direction.",
-        "Currently, I dedicate my time to continuous learning, building projects, and exploring the practical applications of AI in everyday life.",
-        "My journey began with exploration and has gradually moved toward a clear focus on using technology to create meaningful change."
+        "I’ve always enjoyed problem-solving and working with numbers. Over time, I realized technology gave me a bigger canvas to explore those interests. What started as curiosity grew into a genuine passion, especially after I discovered the potential of AI to transform how we live and work.",
+        "A major turning point for me was when I had to take gap year and rethink my goals. Instead of seeing it as a setback, I took it as an opportunity to refocus and align my career with creating meaningful impact through technology.",
+        "The biggest challenges came during uncertain phases — dealing with sudden changes in plans, adapting to the pandemic, and sometimes struggling with self-doubt. Looking back, those challenges actually shaped my resilience and gave me more clarity about where I want to go.",
+        "Right now, my days are a mix of upskilling, experimenting with projects, and staying connected with the tech community. AI and its applications are at the center of what I explore daily.",
+        "If I sum it up, my journey has gone from confusion to clarity. I’ve learned to embrace change, keep learning, and stay focused on building something meaningful."
     ],
     "education": [
-        "A foundation in computer science provided both theoretical knowledge and practical skills necessary for pursuing advanced roles in technology.",
-        "Valuable skills include programming (Python, SQL), AI and data science tools (Pandas, Scikit-learn, PyTorch), web development (HTML, Flask), as well as strong communication and problem-solving abilities.",
-        "Specialized certifications and industry-led programs have been instrumental in deepening expertise in AI and data science.",
-        "Resources such as GitHub, Kaggle, open-source projects, and educational platforms have significantly shaped my learning process.",
-        "I stay updated by following technology communities, reading industry blogs, and participating in webinars and discussions."
+        "My academic background gave me a solid base in computer science and helped me understand how technology really works behind the scenes.",
+        "Skills that have been most valuable for me include programming (Python, SQL), working with AI and data science libraries, building small web apps, and just as importantly — communication, adaptability, and curiosity.",
+        "Certifications and hands-on programs have played a big role in sharpening my technical knowledge and keeping me industry-ready.",
+        "Platforms like GitHub, Kaggle, and YouTube, along with open-source projects, have been some of the best resources for me to learn and grow.",
+        "I stay updated by following tech blogs, joining webinars, and engaging with communities on platforms like LinkedIn and Twitter."
     ],
     "achievements": [
-        "One of my proudest academic achievements has been consistent performance with top grades and recognition during my studies.",
-        "A memorable project involved designing an AI-powered tool to analyze student well-being during the pandemic, which achieved strong accuracy in sentiment analysis and demonstrated practical social value.",
-        "Experiences of failure, such as missed opportunities, reinforced resilience and adaptability, motivating me to re-align with new goals.",
-        "My contributions so far include developing projects that apply AI to real-world challenges and sharing knowledge within peer networks.",
-        "My career path has evolved from broad exploration to a focused vision of leveraging AI for innovation and impact."
+        "One of my proudest academic moments was consistently performing well throughout my studies and being recognized for it.",
+        "A project close to my heart was building an AI tool to analyze student well-being during the pandemic. It wasn’t just about the accuracy — it was about creating something that actually addressed a real problem.",
+        "I’ve had my fair share of failures — moments where things didn’t go the way I planned. But each time, I learned to adapt and come back stronger, which has shaped the way I look at challenges now.",
+        "So far, my biggest contributions have been projects that bridge technology with real-world issues, especially in areas where tech can make life easier or more supportive for people.",
+        "My journey has shifted from exploring different options to building a clear vision — using AI and data to create impact and open new possibilities."
     ],
     "future": [
-        "Over the next five years, I aim to build a career in AI, work on socially impactful projects, and contribute to research and innovation.",
-        "I am particularly interested in roles such as Machine Learning Engineer, AI Developer, or Lecturer, with a focus on technology for social good.",
-        "To stay relevant, I plan to continue learning, collaborating with professionals, and working on impactful projects that reflect industry advancements.",
-        "Trends such as ethical AI, sustainability, and cross-domain AI integration will play a major role in shaping the industry.",
-        "My long-term aspiration is to use AI to solve meaningful problems, empower communities, and foster knowledge-sharing for collective progress."
+        "In the next five years, I see myself working in AI — building projects that solve real problems, contributing to research, and growing into a role where I can also guide and share knowledge with others.",
+        "I’m excited about roles like Machine Learning Engineer or AI Developer, and I also see myself exploring teaching or mentoring in the future.",
+        "To stay relevant, I’ll keep learning, working on projects, and staying connected with what’s happening in the industry.",
+        "Trends like ethical AI, sustainable tech, and cross-industry AI adoption will definitely shape the future, and I want to be a part of that change.",
+        "My bigger goal is to use technology not just to advance my career, but to empower communities and make a lasting impact."
     ]
 };
+
 
 let currentTopic = null;
 
