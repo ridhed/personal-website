@@ -319,30 +319,7 @@ p {
     }
 }
 
-/* Subtle 3D Tilt Effect */
-.treasure {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
 
-.treasure:hover {
-    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
-}
-
-/* Glowing Border Animation */
-.treasure::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 2px solid rgba(55, 167, 225, 0.5);
-    border-radius: 7px;
-    animation: border-glow 2s infinite alternate;
-    pointer-events: none;
-    z-index: -1;
-}
 
 @keyframes border-glow {
     0% {
