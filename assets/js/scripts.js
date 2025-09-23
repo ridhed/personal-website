@@ -1,65 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Welcome to Riddhi Hedaoo's portfolio!");
+    console.log("Welcome to the portfolio!");
 });
 
 const topics = {
     "career": [
-        "1. What inspired you to choose your career path?",
-        "2. Can you describe a major turning point in your career?",
-        "3. What challenges did you face early in your career?",
-        "4. What does a typical day in your life look like?"
+        "1. What inspired you to pursue your career path?",
+        "2. Can you describe a major turning point in your journey?",
+        "3. What challenges did you face in the early stages of your career?",
+        "4. What does a typical day in your professional life look like?"
     ],
     "education": [
-        "1. What educational background prepared you for your career?",
-        "2. What technical or soft skills are most valuable to you?",
-        "3. Are there any certifications or courses that helped you excel?",
-        "4. What resources have impacted your learning?",
-        "5. How do you keep up with trends in your industry?"
+        "1. What educational background helped prepare you for your career?",
+        "2. Which technical or soft skills have been most valuable to you?",
+        "3. Are there any certifications or courses that significantly contributed to your growth?",
+        "4. What resources have influenced your learning the most?",
+        "5. How do you stay updated with trends in your industry?"
     ],
     "achievements": [
-        "1. What is your proudest professional achievement?",
+        "1. What is your proudest professional achievement so far?",
         "2. Can you share a memorable project or experience you’ve worked on?",
-        "3. Have you ever failed at something? How did you handle it, and what did you learn?",
-        "4. What’s the most significant contribution you’ve made in your field?",
-        "5. How has your career evolved over the years?"
+        "3. Have you experienced failure? How did you handle it, and what did you learn?",
+        "4. What is the most significant contribution you have made in your field?",
+        "5. How has your professional journey evolved over time?"
     ],
     "future": [
         "1. What are your goals for the next five years?",
-        "2. Are there any industries or roles you’d like to explore in the future?",
-        "3. How do you plan to stay relevant in your field over the years?",
-        "4. What trends do you think will shape your industry in the next decade?",
-        "5. What impact do you hope to make on the world through your work?"
+        "2. Are there any industries or roles you aspire to explore in the future?",
+        "3. How do you plan to stay relevant in your field as it evolves?",
+        "4. What trends do you think will shape your industry in the coming decade?",
+        "5. What impact do you hope to make through your work?"
     ]
 };
 
 const answers = {
     "career": [
-        "I was initially drawn to commerce due to my love for math, but by 10th grade, I sought a unique path. My father introduced me to polytechnic studies, which fit academically and financially as a twin sibling. Initially aspiring to aeronautical engineering, I pivoted to computer technology due to my aptitude. My scores led me to a government engineering college in Nagpur. A gap year in 2024 reignited my curiosity and passion, especially for AI and its transformative potential.",
-        "A major turning point was the cancellation of my MS plans in Canada, which prompted me to refocus on creating a social impact through technology.",
-        "Challenges included educational confusion, the COVID-19 pandemic disrupting studies, canceled MS plans in Canada, and self-doubt. These obstacles helped me rediscover my drive.",
-        "Currently, I focus on upskilling, building projects, and networking within the tech industry, exploring AI and its applications daily.",
-        "I started with a lack of direction but have gradually gained clarity and focus, preparing to create meaningful change."
+        "My interest in problem-solving and technology inspired me to pursue a career in computer science. Over time, I found myself drawn toward the transformative potential of artificial intelligence.",
+        "A major turning point was shifting focus from traditional career plans to exploring AI-driven solutions with the potential for social impact.",
+        "Early challenges included navigating uncertainty, adapting during the pandemic, and overcoming self-doubt. These experiences strengthened resilience and clarified my direction.",
+        "Currently, I dedicate my time to continuous learning, building projects, and exploring the practical applications of AI in everyday life.",
+        "My journey began with exploration and has gradually moved toward a clear focus on using technology to create meaningful change."
     ],
     "education": [
-        "A polytechnic diploma in computer technology introduced me to technical fundamentals, while a bachelor's in Computer Science and Engineering solidified my knowledge.",
-        "Valuable skills include Python, MySQL, AI tools (Pandas, Scikit-learn, PyTorch), web development (HTML, Flask), and soft skills like communication, resilience, and curiosity.",
-        "Certifications like OdinSchool's Data Science program, TECHSAKSHAM, and SAP Conversational AI have been crucial in enhancing my technical expertise.",
-        "Resources like GitHub, Kaggle, YouTube, and educational platforms have significantly impacted my learning.",
-        "I keep up with trends by following tech blogs, attending webinars, and staying active on platforms like Twitter and LinkedIn."
+        "A foundation in computer science provided both theoretical knowledge and practical skills necessary for pursuing advanced roles in technology.",
+        "Valuable skills include programming (Python, SQL), AI and data science tools (Pandas, Scikit-learn, PyTorch), web development (HTML, Flask), as well as strong communication and problem-solving abilities.",
+        "Specialized certifications and industry-led programs have been instrumental in deepening expertise in AI and data science.",
+        "Resources such as GitHub, Kaggle, open-source projects, and educational platforms have significantly shaped my learning process.",
+        "I stay updated by following technology communities, reading industry blogs, and participating in webinars and discussions."
     ],
     "achievements": [
-        "My proudest achievement is getting first class distinction in both my degress (Diploma & B.E) plus getting Second University ranker in B.E",
-        "A memorable project is 'Accumulated Report Analysis of Youth (A-RAY),' which used AI to analyze student stress during the pandemic, achieving 97% training accuracy in sentiment analysis.",
-        "Failing to pursue an MS in Canada taught me resilience and adaptability, motivating me to focus on local impact through technology.",
-        "My contributions so far include knowledge-building and projects aimed at solving real-world problems, like student mental health analysis.",
-        "My career has evolved from uncertainty to a focus on leveraging AI to create meaningful social change."
+        "One of my proudest academic achievements has been consistent performance with top grades and recognition during my studies.",
+        "A memorable project involved designing an AI-powered tool to analyze student well-being during the pandemic, which achieved strong accuracy in sentiment analysis and demonstrated practical social value.",
+        "Experiences of failure, such as missed opportunities, reinforced resilience and adaptability, motivating me to re-align with new goals.",
+        "My contributions so far include developing projects that apply AI to real-world challenges and sharing knowledge within peer networks.",
+        "My career path has evolved from broad exploration to a focused vision of leveraging AI for innovation and impact."
     ],
     "future": [
-        "In the next five years, I aim to establish a career in AI, work on socially impactful projects, and possibly pursue higher studies in cutting-edge fields.",
-        "I’m interested in roles like Machine Learning Engineer, AI Developer, and Lecturer, focusing on tech for social good.",
-        "I plan to stay relevant through continuous learning, networking, and building impactful projects.",
-        "Key trends shaping my industry include ethical AI, sustainability, and AI-driven innovation across domains.",
-        "I aspire to harness AI to solve critical problems, empower communities, and contribute to India's progress by sharing knowledge and fostering innovation."
+        "Over the next five years, I aim to build a career in AI, work on socially impactful projects, and contribute to research and innovation.",
+        "I am particularly interested in roles such as Machine Learning Engineer, AI Developer, or Lecturer, with a focus on technology for social good.",
+        "To stay relevant, I plan to continue learning, collaborating with professionals, and working on impactful projects that reflect industry advancements.",
+        "Trends such as ethical AI, sustainability, and cross-domain AI integration will play a major role in shaping the industry.",
+        "My long-term aspiration is to use AI to solve meaningful problems, empower communities, and foster knowledge-sharing for collective progress."
     ]
 };
 
