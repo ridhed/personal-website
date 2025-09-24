@@ -148,14 +148,7 @@ document.addEventListener('visibilitychange', function() {
 });
 
 const topics = {
-    "career": [
-        "1. What inspired Riddhi to pursue her career path?",
-        "2. Can you describe a major turning point in Riddhi's journey?",
-        "3. What challenges did Riddhi face early on?",
-        "4. What does a typical day look like for Riddhi?",
-        "5. How has Riddhi's journey shaped her focus now?"
-    ],
-    "education": [
+     "education": [
         "1. Can you summarize Riddhi's educational journey?",
         "2. Which academic achievements is Riddhi proud of?",
         "3. Which technical or soft skills have been most valuable to Riddhi?",
@@ -167,6 +160,13 @@ const topics = {
         "2. Which certification had the most impact on her skills?",
         "3. How do certifications help Riddhi in her career?",
         "4. Does Riddhi plan to pursue more certifications in the future?"
+    ],
+    "career": [
+        "1. What inspired Riddhi to pursue her career path?",
+        "2. Can you describe a major turning point in Riddhi's journey?",
+        "3. What challenges did Riddhi face early on?",
+        "4. What does a typical day look like for Riddhi?",
+        "5. How has Riddhi's journey shaped her focus now?"
     ],
     "projects": [
         "1. Tell me about a key project Riddhi has worked on.",
@@ -184,13 +184,6 @@ const topics = {
     ]
 };
 const answers = {
-    "career": [
-        "Riddhi has always enjoyed problem-solving and working with numbers. Technology offered a larger canvas for her curiosity, and AI became a passion once she saw its potential to transform lives.",
-        "A turning point for Riddhi was receiving an offer from Northeastern University for higher studies. Although she had to defer the plan due to visa issues, this recognition validated her capabilities and inspired her to focus on creating impact through technology locally.",
-        "Early challenges included adapting to unexpected changes, pandemic disruptions, and moments of self-doubt. These obstacles helped her grow more resilient and focused.",
-        "Riddhi's days are a mix of learning new skills, building projects, and exploring AI applications — always connecting theory with practical solutions.",
-        "Overall, Riddhi's journey has progressed from uncertainty to clarity, focusing on leveraging technology for meaningful change."
-    ],
     "education": [
         "Riddhi started with a Diploma in Computer Technology, followed by a B.E. in Computer Science, and is now pursuing an M.Tech in Computer Science. Each step added layers of technical depth and problem-solving skills.",
         "She is proud of her B.E. achievements — CGPA 8.46/10, Second Rank in Nagpur University — and being active as a class representative for three years. Additionally, getting 8 Band in IELTS was a major personal achievement that reflects her academic dedication.",
@@ -203,6 +196,13 @@ const answers = {
         "The Data Science Professional certification by OdinSchool had a significant impact, helping Riddhi apply machine learning and data analysis techniques effectively in her projects.",
         "Certifications help Riddhi strengthen practical skills, stay updated with industry-relevant tools, and enhance her confidence in applying technology to real-world challenges.",
         "Yes, Riddhi is actively planning to pursue more certifications in the future. Her roadmap includes:\n- Amazon Web Services (AWS) for cloud and data solutions\n- IBM SQL for Data Science and AI-focused programs\n- Google certifications like Google Analytics and TensorFlow.\nThese will keep her industry-ready and deepen her expertise in AI, data science, and cloud technologies."
+    ],
+    "career": [
+        "Riddhi has always enjoyed problem-solving and working with numbers. Technology offered a larger canvas for her curiosity, and AI became a passion once she saw its potential to transform lives.",
+        "A turning point for Riddhi was receiving an offer from Northeastern University for higher studies. Although she had to defer the plan due to visa issues, this recognition validated her capabilities and inspired her to focus on creating impact through technology locally.",
+        "Early challenges included adapting to unexpected changes, pandemic disruptions, and moments of self-doubt. These obstacles helped her grow more resilient and focused.",
+        "Riddhi's days are a mix of learning new skills, building projects, and exploring AI applications — always connecting theory with practical solutions.",
+        "Overall, Riddhi's journey has progressed from uncertainty to clarity, focusing on leveraging technology for meaningful change."
     ],
     "projects": [
         "For instance, Riddhi built the 'Axon Classic Vehicles Sales Dashboard' which uncovered market trends and actionable insights using Power BI and DAX.",
