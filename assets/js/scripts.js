@@ -190,10 +190,10 @@ const answers = {
     ],
     "education": [
         "Riddhi started with a Diploma in Computer Technology, followed by a B.E. in Computer Science, and is now pursuing an M.Tech in Computer Science. Each step added layers of technical depth and problem-solving skills.",
-        "She is proud of her B.E. achievements — CGPA 8.46/10, Second Rank in her department — and being active as a class representative for three years. Additionally, receiving an offer from Northeastern University was a major personal achievement that reflects her academic dedication.",
+        "She is proud of her B.E. achievements — CGPA 8.46/10, Second Rank in Nagpur University — and being active as a class representative for three years. Additionally, getting 8 Band in IELTS was a major personal achievement that reflects her academic dedication.",
         "Technical skills like Python, SQL, ML/NLP, and data visualization have been key, alongside soft skills like communication, adaptability, and teamwork.",
         "Leadership roles taught Riddhi how to coordinate teams, solve problems collaboratively, and gain confidence in guiding peers.",
-        "Certifications like OdinSchool Data Science, TECHSAKSHAM, and SAP Conversational AI enhanced her practical knowledge and kept her industry-ready."
+        "Certifications like OdinSchool Data Science, TECHSAKSHAM, and SAP Conversational AI enhanced her practical knowledge and kept her industry-ready. IELTS certificate showed her proficiency in English, crucial for global opportunities."
     ],
     "projects": [
         "For instance, Riddhi built the 'Axon Classic Vehicles Sales Dashboard' which uncovered market trends and actionable insights using Power BI and DAX.",
