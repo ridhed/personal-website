@@ -147,68 +147,72 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
-// Chatbot functionality
+// Topics for the chat
 const topics = {
     "career": [
-        "1. What inspired Riddhi to pursue her career path?",
-        "2. Major turning point in her journey?",
-        "3. What challenges did Riddhi face in the early stages of her career?",
-        "4. What does a typical day in her professional life look like?"
+        "What inspired Riddhi to pursue her career path?",
+        "Can you describe a major turning point in Riddhi's journey?",
+        "What challenges did Riddhi face early on?",
+        "What does a typical day look like for Riddhi?",
+        "How has Riddhi's journey shaped her focus now?"
     ],
     "education": [
-        "1. What educational background helped prepare Riddhi for her career?",
-        "2. Which technical or soft skills have been most valuable to Riddhi?",
-        "3. Are there any certifications or courses that significantly contributed to her growth?",
-        "4. What resources have influenced her learning the most?",
-        "5. How do Riddhi stay updated with trends in her industry?"
+        "Can you summarize Riddhi's educational journey?",
+        "Which academic achievements is Riddhi proud of?",
+        "Which technical or soft skills have been most valuable to Riddhi?",
+        "Have leadership roles influenced Riddhi's outlook?",
+        "How have certifications helped Riddhi's growth?"
     ],
-    "achievements": [
-        "1. What is her proudest professional achievement so far?",
-        "2. A memorable project or experience Riddhi've worked on?",
-        "3. Have Riddhi experienced failure? How did Riddhi handle it, and what did she learn?",
-        "4. What is the most significant contribution Riddhi have made in her field?",
-        "5. How has her professional journey evolved over time?"
+    "projects": [
+        "Tell me about a key project Riddhi has worked on.",
+        "Which project challenged Riddhi the most?",
+        "How did Riddhi's projects impact users or organizations?",
+        "Which tools and technologies does Riddhi use?",
+        "How do these projects reflect Riddhi's career growth?"
     ],
     "future": [
-        "1. What are her goals for the next five years?",
-        "2. Are there any industries or roles Riddhi aspire to explore in the future?",
-        "3. How do Riddhi plan to stay relevant in her field as it evolves?",
-        "4. What trends do Riddhi think will shape her industry in the coming decade?",
-        "5. What impact do Riddhi hope to make through her work?"
+        "What are Riddhi's goals for the next five years?",
+        "Are there any roles or industries Riddhi would like to explore?",
+        "How does Riddhi plan to stay relevant in her field?",
+        "Which trends will shape Riddhi's industry?",
+        "What long-term impact does Riddhi hope to make?"
     ]
 };
 
+// Answers (authentic, professional, conversational)
 const answers = {
     "career": [
-        "I've always enjoyed problem-solving and working with numbers. Over time, I realized technology gave me a bigger canvas to explore those interests. What started as curiosity grew into a genuine passion, especially after I discovered the potential of AI to transform how we live and work.",
-        "A major turning point for me was when I had to take gap year and rethink my goals. Instead of seeing it as a setback, I took it as an opportunity to refocus and align my career with creating meaningful impact through technology.",
-        "The biggest challenges came during uncertain phases — dealing with sudden changes in plans, adapting to the pandemic, and sometimes struggling with self-doubt. Looking back, those challenges actually shaped my resilience and gave me more clarity about where I want to go.",
-        "Right now, my days are a mix of upskilling, experimenting with projects, and staying connected with the tech community. AI and its applications are at the center of what I explore daily.",
-        "If I sum it up, my journey has gone from confusion to clarity. I've learned to embrace change, keep learning, and stay focused on building something meaningful."
+        "Riddhi has always enjoyed problem-solving and working with numbers. Technology offered a larger canvas for her curiosity, and AI became a passion once she saw its potential to transform lives.",
+        "A turning point for Riddhi was receiving an offer from Northeastern University for higher studies. Although she had to defer the plan due to visa issues, this recognition validated her capabilities and inspired her to focus on creating impact through technology locally.",
+        "Early challenges included adapting to unexpected changes, pandemic disruptions, and moments of self-doubt. These obstacles helped her grow more resilient and focused.",
+        "Riddhi's days are a mix of learning new skills, building projects, and exploring AI applications — always connecting theory with practical solutions.",
+        "Overall, Riddhi's journey has progressed from uncertainty to clarity, focusing on leveraging technology for meaningful change."
     ],
     "education": [
-        "My academic background gave me a solid base in computer science and helped me understand how technology really works behind the scenes.",
-        "Skills that have been most valuable for me include programming (Python, SQL), working with AI and data science libraries, building small web apps, and just as importantly — communication, adaptability, and curiosity.",
-        "Certifications and hands-on programs have played a big role in sharpening my technical knowledge and keeping me industry-ready.",
-        "Platforms like GitHub, Kaggle, and YouTube, along with open-source projects, have been some of the best resources for me to learn and grow.",
-        "I stay updated by following tech blogs, joining webinars, and engaging with communities on platforms like LinkedIn and Twitter."
+        "Riddhi started with a Diploma in Computer Technology, followed by a B.E. in Computer Science, and is now pursuing an M.Tech in Computer Science. Each step added layers of technical depth and problem-solving skills.",
+        "She is proud of her B.E. achievements — CGPA 8.46/10, Second Rank in her department — and being active as a class representative for three years. Additionally, receiving an offer from Northeastern University was a major personal achievement that reflects her academic dedication.",
+        "Technical skills like Python, SQL, ML/NLP, and data visualization have been key, alongside soft skills like communication, adaptability, and teamwork.",
+        "Leadership roles taught Riddhi how to coordinate teams, solve problems collaboratively, and gain confidence in guiding peers.",
+        "Certifications like OdinSchool Data Science, TECHSAKSHAM, and SAP Conversational AI enhanced her practical knowledge and kept her industry-ready."
     ],
-    "achievements": [
-        "One of my proudest academic moments was consistently performing well throughout my studies and being recognized for it.",
-        "A project close to my heart was building an AI tool to analyze student well-being during the pandemic. It wasn't just about the accuracy — it was about creating something that actually addressed a real problem.",
-        "I've had my fair share of failures — moments where things didn't go the way I planned. But each time, I learned to adapt and come back stronger, which has shaped the way I look at challenges now.",
-        "So far, my biggest contributions have been projects that bridge technology with real-world issues, especially in areas where tech can make life easier or more supportive for people.",
-        "My journey has shifted from exploring different options to building a clear vision — using AI and data to create impact and open new possibilities."
+    "projects": [
+        "For instance, Riddhi built the 'Axon Classic Vehicles Sales Dashboard' which uncovered market trends and actionable insights using Power BI and DAX.",
+        "The 'Accumulated Report Analysis of Youth (A-RAY)' project was particularly challenging, analyzing student stress during COVID-19 while balancing accuracy and meaningful insights.",
+        "Projects like 'Credit Card Approval Prediction' reduced manual review by 40%, while 'ALAG' supported students' emotional well-being — demonstrating real-world impact.",
+        "Riddhi works primarily with Python, SQL, Flask, ML libraries (Pandas, Scikit-learn, NLTK), and visualization tools (Power BI, Matplotlib, Streamlit). Git ensures smooth version control and collaboration.",
+        "These projects showcase Riddhi's growth from technical learning to applying AI to real-world problems, aligning with her goal of meaningful technological impact."
     ],
     "future": [
-        "In the next five years, I see myself working in AI — building projects that solve real problems, contributing to research, and growing into a role where I can also guide and share knowledge with others.",
-        "I'm excited about roles like Machine Learning Engineer or AI Developer, and I also see myself exploring teaching or mentoring in the future.",
-        "To stay relevant, I'll keep learning, working on projects, and staying connected with what's happening in the industry.",
-        "Trends like ethical AI, sustainable tech, and cross-industry AI adoption will definitely shape the future, and I want to be a part of that change.",
-        "My bigger goal is to use technology not just to advance my career, but to empower communities and make a lasting impact."
+        "Over the next five years, Riddhi aims to work in AI, build socially impactful projects, and contribute to research and innovation.",
+        "She is interested in roles like Machine Learning Engineer, AI Developer, or mentoring/teaching opportunities where technology meets social good.",
+        "Riddhi plans to stay relevant through continuous learning, hands-on projects, and engagement with the industry.",
+        "She believes trends like ethical AI, sustainability, and cross-domain AI applications will shape the future, and she wants to contribute to this change.",
+        "Ultimately, Riddhi hopes to leverage AI to empower communities, solve real problems, and foster knowledge-sharing for long-term impact."
     ]
 };
 
+// Example: start chat for career
+// startChat('career');
 let currentTopic = null;
 
 function sendMessage() {
