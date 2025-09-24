@@ -150,31 +150,31 @@ document.addEventListener('visibilitychange', function() {
 // Chatbot functionality
 const topics = {
     "career": [
-        "1. What inspired you to pursue your career path?",
-        "2. Can you describe a major turning point in your journey?",
-        "3. What challenges did you face in the early stages of your career?",
-        "4. What does a typical day in your professional life look like?"
+        "1. What inspired Riddhi to pursue her career path?",
+        "2. Major turning point in her journey?",
+        "3. What challenges did Riddhi face in the early stages of her career?",
+        "4. What does a typical day in her professional life look like?"
     ],
     "education": [
-        "1. What educational background helped prepare you for your career?",
-        "2. Which technical or soft skills have been most valuable to you?",
-        "3. Are there any certifications or courses that significantly contributed to your growth?",
-        "4. What resources have influenced your learning the most?",
-        "5. How do you stay updated with trends in your industry?"
+        "1. What educational background helped prepare Riddhi for her career?",
+        "2. Which technical or soft skills have been most valuable to Riddhi?",
+        "3. Are there any certifications or courses that significantly contributed to her growth?",
+        "4. What resources have influenced her learning the most?",
+        "5. How do Riddhi stay updated with trends in her industry?"
     ],
     "achievements": [
-        "1. What is your proudest professional achievement so far?",
-        "2. Can you share a memorable project or experience you've worked on?",
-        "3. Have you experienced failure? How did you handle it, and what did you learn?",
-        "4. What is the most significant contribution you have made in your field?",
-        "5. How has your professional journey evolved over time?"
+        "1. What is her proudest professional achievement so far?",
+        "2. A memorable project or experience Riddhi've worked on?",
+        "3. Have Riddhi experienced failure? How did Riddhi handle it, and what did she learn?",
+        "4. What is the most significant contribution Riddhi have made in her field?",
+        "5. How has her professional journey evolved over time?"
     ],
     "future": [
-        "1. What are your goals for the next five years?",
-        "2. Are there any industries or roles you aspire to explore in the future?",
-        "3. How do you plan to stay relevant in your field as it evolves?",
-        "4. What trends do you think will shape your industry in the coming decade?",
-        "5. What impact do you hope to make through your work?"
+        "1. What are her goals for the next five years?",
+        "2. Are there any industries or roles Riddhi aspire to explore in the future?",
+        "3. How do Riddhi plan to stay relevant in her field as it evolves?",
+        "4. What trends do Riddhi think will shape her industry in the coming decade?",
+        "5. What impact do Riddhi hope to make through her work?"
     ]
 };
 
