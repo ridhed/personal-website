@@ -149,38 +149,38 @@ document.addEventListener('visibilitychange', function() {
 
 const topics = {
     "career": [
-        "What inspired Riddhi to pursue her career path?",
-        "Can you describe a major turning point in Riddhi's journey?",
-        "What challenges did Riddhi face early on?",
-        "What does a typical day look like for Riddhi?",
-        "How has Riddhi's journey shaped her focus now?"
+        "1. What inspired Riddhi to pursue her career path?",
+        "2. Can you describe a major turning point in Riddhi's journey?",
+        "3. What challenges did Riddhi face early on?",
+        "4. What does a typical day look like for Riddhi?",
+        "5. How has Riddhi's journey shaped her focus now?"
     ],
     "education": [
-        "Can you summarize Riddhi's educational journey?",
-        "Which academic achievements is Riddhi proud of?",
-        "Which technical or soft skills have been most valuable to Riddhi?",
-        "Have leadership roles influenced Riddhi's outlook?",
-        "How have certifications helped Riddhi's growth?"
+        "1. Can you summarize Riddhi's educational journey?",
+        "2. Which academic achievements is Riddhi proud of?",
+        "3. Which technical or soft skills have been most valuable to Riddhi?",
+        "4. Have leadership roles influenced Riddhi's outlook?",
+        "5. How have certifications helped Riddhi's growth?"
     ],
     "certifications": [
-        "Which certifications has Riddhi earned?",
-        "Which certification had the most impact on her skills?",
-        "How do certifications help Riddhi in her career?",
-        "Does Riddhi plan to pursue more certifications in the future?"
+        "1. Which certifications has Riddhi earned?",
+        "2. Which certification had the most impact on her skills?",
+        "3. How do certifications help Riddhi in her career?",
+        "4. Does Riddhi plan to pursue more certifications in the future?"
     ],
     "projects": [
-        "Tell me about a key project Riddhi has worked on.",
-        "Which project challenged Riddhi the most?",
-        "How did Riddhi's projects impact users or organizations?",
-        "Which tools and technologies does Riddhi use?",
-        "How do these projects reflect Riddhi's career growth?"
+        "1. Tell me about a key project Riddhi has worked on.",
+        "2. Which project challenged Riddhi the most?",
+        "3. How did Riddhi's projects impact users or organizations?",
+        "4. Which tools and technologies does Riddhi use?",
+        "5. How do these projects reflect Riddhi's career growth?"
     ],
     "future": [
-        "What are Riddhi's goals for the next five years?",
-        "Are there any roles or industries Riddhi would like to explore?",
-        "How does Riddhi plan to stay relevant in her field?",
-        "Which trends will shape Riddhi's industry?",
-        "What long-term impact does Riddhi hope to make?"
+        "1. What are Riddhi's goals for the next five years?",
+        "2. Are there any roles or industries Riddhi would like to explore?",
+        "3. How does Riddhi plan to stay relevant in her field?",
+        "4. Which trends will shape Riddhi's industry?",
+        "5. What long-term impact does Riddhi hope to make?"
     ]
 };
 const answers = {
