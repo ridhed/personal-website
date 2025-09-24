@@ -119,7 +119,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Track page engagement time
+
 let pageLoadTime = Date.now();
 let activeTime = 0;
 let lastActiveTime = Date.now();
@@ -147,7 +147,6 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
-// Topics for the chat
 const topics = {
     "career": [
         "What inspired Riddhi to pursue her career path?",
@@ -162,6 +161,12 @@ const topics = {
         "Which technical or soft skills have been most valuable to Riddhi?",
         "Have leadership roles influenced Riddhi's outlook?",
         "How have certifications helped Riddhi's growth?"
+    ],
+        "certifications": [
+        "Which certifications has Riddhi earned?",
+        "Which certification had the most impact on her skills?",
+        "How do certifications help Riddhi in her career?",
+        "Does Riddhi plan to pursue more certifications in the future?"
     ],
     "projects": [
         "Tell me about a key project Riddhi has worked on.",
@@ -178,8 +183,6 @@ const topics = {
         "What long-term impact does Riddhi hope to make?"
     ]
 };
-
-// Answers (authentic, professional, conversational)
 const answers = {
     "career": [
         "Riddhi has always enjoyed problem-solving and working with numbers. Technology offered a larger canvas for her curiosity, and AI became a passion once she saw its potential to transform lives.",
@@ -194,6 +197,12 @@ const answers = {
         "Technical skills like Python, SQL, ML/NLP, and data visualization have been key, alongside soft skills like communication, adaptability, and teamwork.",
         "Leadership roles taught Riddhi how to coordinate teams, solve problems collaboratively, and gain confidence in guiding peers.",
         "Certifications like OdinSchool Data Science, TECHSAKSHAM, and SAP Conversational AI enhanced her practical knowledge and kept her industry-ready. IELTS certificate showed her proficiency in English, crucial for global opportunities."
+    ],
+    "certifications": [
+        "Riddhi has earned several certifications, including:\n- OdinSchool Certified Data Science Professional\n- TECHSAKSHAM Program by Edunet in partnership with SAP and Microsoft\n- How to Build Chatbots with SAP Conversational AI\n- From Media Computation to Data Science\n- IELTS with an Overall Band Score of 8.0",
+        "The Data Science Professional certification by OdinSchool had a significant impact, helping Riddhi apply machine learning and data analysis techniques effectively in her projects.",
+        "Certifications help Riddhi strengthen practical skills, stay updated with industry-relevant tools, and enhance her confidence in applying technology to real-world challenges.",
+        "Yes, Riddhi is actively planning to pursue more certifications in the future. Her roadmap includes:\n- Amazon Web Services (AWS) for cloud and data solutions\n- IBM SQL for Data Science and AI-focused programs\n- Google certifications like Google Analytics and TensorFlow.\nThese will keep her industry-ready and deepen her expertise in AI, data science, and cloud technologies."
     ],
     "projects": [
         "For instance, Riddhi built the 'Axon Classic Vehicles Sales Dashboard' which uncovered market trends and actionable insights using Power BI and DAX.",
