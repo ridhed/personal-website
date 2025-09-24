@@ -162,7 +162,7 @@ const topics = {
         "Have leadership roles influenced Riddhi's outlook?",
         "How have certifications helped Riddhi's growth?"
     ],
-        "certifications": [
+    "certifications": [
         "Which certifications has Riddhi earned?",
         "Which certification had the most impact on her skills?",
         "How do certifications help Riddhi in her career?",
