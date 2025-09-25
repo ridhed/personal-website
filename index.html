@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Explorer Portfolio</title>
     <meta property="og:title" content="Riddhi Hedaoo | 👩‍🚀 Portfolio" />
     <meta property="og:description" content="🚀Explore my journey through Planet CS" />
-    <meta property="og:image" content="https://ridhed.github.io/personal-website/assets/images/background/preview.png" />
+    <meta property="og:image"
+        content="https://ridhed.github.io/personal-website/assets/images/background/preview.png" />
     <meta property="og:url" content="https://ridhed.github.io/personal-website/" />
     <meta property="og:type" content="website" />
 
-    
+
     <!-- GoatCounter Analytics - REPLACE "ridhed" with your actual GoatCounter account name -->
-    <script data-goatcounter="https://riddhihedaoo.goatcounter.com/count" 
-            async src="//gc.zgo.at/count.js"></script>
-    
+    <script data-goatcounter="https://riddhihedaoo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+
     <!-- Simple Privacy-Friendly Analytics -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Initialize local analytics
             let totalVisits = localStorage.getItem('totalVisits') || 0;
             totalVisits = parseInt(totalVisits) + 1;
             localStorage.setItem('totalVisits', totalVisits);
-            
+
             const today = new Date().toLocaleDateString();
             let dailyVisits = JSON.parse(localStorage.getItem('dailyVisits') || '{}');
             dailyVisits[today] = (dailyVisits[today] || 0) + 1;
             localStorage.setItem('dailyVisits', JSON.stringify(dailyVisits));
-            
+
             console.log('🚀 Portfolio loaded');
             console.log('📊 Local visits:', totalVisits);
             console.log('🌐 GoatCounter: Active');
@@ -42,7 +43,9 @@
     </script>
 </head>
 
-<body style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000; " loading="lazy">
+<body
+    style="background: url('assets/images/background/space-background.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; background-color: #000; "
+    loading="lazy">
     <div class="container">
         <!-- Your existing navigation and slideshow content remains exactly the same -->
         <header class="navbar">
@@ -67,8 +70,11 @@
             <!-- Your existing slides remain exactly the same -->
             <div class="slide active">
                 <h1>🚀 Explorer Log: Riddhi Hedaoo's Mission to Planet CS</h1>
-                <p><strong>Log Entry:</strong> "I've landed on a mysterious and uncharted world called Planet CS. My mission is to explore its vast landscapes, uncover its secrets, and extract valuable treasures that will shape my journey. The planet awaits my curiosity and creativity!"</p>
-                <p><em>As a visitor, you're about to witness Riddhi's journey through her mission logs. Prepare to explore the treasures she's discovered and the legacy she's building.</em></p>
+                <p><strong>Log Entry:</strong> "I've landed on a mysterious and uncharted world called Planet CS. My
+                    mission is to explore its vast landscapes, uncover its secrets, and extract valuable treasures that
+                    will shape my journey. The planet awaits my curiosity and creativity!"</p>
+                <p><em>As a visitor, you're about to witness Riddhi's journey through her mission logs. Prepare to
+                        explore the treasures she's discovered and the legacy she's building.</em></p>
                 <div class="slide-buttons">
                     <button class="back-btn" disabled>Back</button>
                     <button class="next-btn">Access Mission Logs</button>
@@ -77,13 +83,21 @@
 
             <div class="slide">
                 <h1>🌌 Explorer Log: Treasures Unearthed by Riddhi Hedaoo</h1>
-                <p><strong>Log Entry:</strong> "Through my tireless exploration and terraforming efforts, I've discovered incredible treasures that define my journey on Planet CS. Each gem represents a milestone in my adventure. Here's what I've found so far:"</p>
+                <p><strong>Log Entry:</strong> "Through my tireless exploration and terraforming efforts, I've
+                    discovered incredible treasures that define my journey on Planet CS. Each gem represents a milestone
+                    in my adventure. Here's what I've found so far:"</p>
                 <div class="treasures">
-                    <a href="https://ridhed.github.io/personal-website/project.html" class="treasure">🚀 <strong>Projects</strong> - My innovative creations that breathe life into the planet.</a>
-                    <a href="https://ridhed.github.io/personal-website/about.html" class="treasure">👩‍🚀 <strong>About</strong> - My journey, from career inspirations to future aspirations.</a>
-                    <a href="https://ridhed.github.io/personal-website/about.html" class="treasure">🛰️ <strong>Research</strong> - Exploring the unknown corners of Planet CS</a>
-                    <a href="https://ridhed.github.io/personal-website/contact.html" class="treasure">📡 <strong>Contact</strong> - A beacon to connect with fellow explorers.</a>
-                    <a href="https://ridhed.github.io/personal-website/gallery.html" class="treasure">📸 <strong>Gallery</strong> - A visual journey through my explorations and achievements.</a>
+                    <a href="https://ridhed.github.io/personal-website/project.html" class="treasure">🚀
+                        <strong>Projects</strong> - Launchpads of my innovative creations, breathing life into Planet.</a>
+                    <a href="https://ridhed.github.io/personal-website/about.html" class="treasure">👩‍🚀
+                        <strong>About</strong> - Journey Log: from career inspirations to future aspirations.</a>
+                    <a href="https://ridhed.github.io/personal-website/about.html" class="treasure">🛰️
+                        <strong>Research</strong> - Exploration logs mapping discoveries across uncharted skies.</a>
+                    <a href="https://ridhed.github.io/personal-website/contact.html" class="treasure">📡
+                        <strong>Contact</strong> - A communication beacon to connect with fellow explorers.</a>
+                    <a href="https://ridhed.github.io/personal-website/gallery.html" class="treasure">📸
+                        <strong>Gallery</strong> - Snapshots from missions: a visual record of explorations.</a>
+
                 </div>
                 <div class="slide-buttons">
                     <button class="back-btn">Back</button>
@@ -93,11 +107,15 @@
 
             <div class="slide">
                 <h1>👩‍🚀 Explorer Log: Riddhi Hedaoo</h1>
-                <p><strong>Log Entry:</strong> "I've only just begun to unlock the potential of Planet CS. The treasures I've discovered are the foundation of my legacy. Dive deeper into my projects to see how I've transformed these gems into real-world solutions and innovations."</p>
+                <p><strong>Log Entry:</strong> "I've only just begun to unlock the potential of Planet CS. The treasures
+                    I've discovered are the foundation of my legacy. Dive deeper into my projects to see how I've
+                    transformed these gems into real-world solutions and innovations."</p>
                 <div class="cta-buttons">
-                    <button class="btn" onclick="window.location.href='assets/documents/Resume.pdf'" download>Download My Explorer's Log (Resume)</button>
+                    <button class="btn" onclick="window.location.href='assets/documents/Resume.pdf'" download>Download
+                        My Explorer's Log (Resume)</button>
                 </div>
-                <p><em>Curious about my journey? Check out my <a href="about.html" class="highlight">About</a> page to learn more about my career, education, achievements, and future goals!</em></p>
+                <p><em>Curious about my journey? Check out my <a href="about.html" class="highlight">About</a> page to
+                        learn more about my career, education, achievements, and future goals!</em></p>
                 <div class="slide-buttons">
                     <button class="back-btn">Back</button>
                     <button class="next-btn" disabled>Next</button>
@@ -108,4 +126,5 @@
     <!-- JavaScript -->
     <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
