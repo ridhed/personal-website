@@ -8,7 +8,8 @@ body {
     background-color: #051026;
     min-height: 100vh;
     overflow-x: hidden;
-    display: block;
+    display: flex;
+    flex-direction: column; /* enable sticky footer */
     perspective: 1000px;
 }
 
@@ -26,52 +27,48 @@ body::before {
 }
 
 @keyframes glow {
-    0% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0.8;
-    }
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the navbar */
+    justify-content: center;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(5, 16, 38, 0.6); /* Semi-transparent Black Pearl */
-    box-shadow: 0 0 20px rgba(55, 167, 225, 0.5); /* Glowing shadow */
+    background: rgba(5, 16, 38, 0.6);
+    box-shadow: 0 0 20px rgba(55, 167, 225, 0.5);
     position: fixed;
-    width: 80%; /* Adjust width to make it look centered */
-    top: 20px; /* Position from the top */
+    width: 80%;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    border-radius: 15px; /* Rounded corners */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .navbar:hover {
-    background: rgba(5, 16, 38, 0.8); /* Darker on hover */
-    box-shadow: 0 0 30px rgba(55, 167, 225, 0.8); /* Stronger glow on hover */
+    background: rgba(5, 16, 38, 0.8);
+    box-shadow: 0 0 30px rgba(55, 167, 225, 0.8);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Increased gap for a spacious look */
+    gap: 40px;
     margin: 0;
     padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: #d0eef4; /* Link Water */
+    color: #d0eef4;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem; /* Slightly larger text */
-    padding: 10px 20px; /* More padding for a bigger click area */
+    font-size: 1.2rem;
+    padding: 10px 20px;
     position: relative;
     transition: all 0.3s ease;
     z-index: 1;
@@ -100,11 +97,10 @@ body::before {
 }
 
 .nav-links li a:hover {
-    color: #37a7e1; /* Picton Blue */
+    color: #37a7e1;
     text-shadow: 0 0 10px rgba(55, 167, 225, 0.8), 0 0 20px rgba(55, 167, 225, 0.6);
 }
 
-/* Light Trail Effect */
 .nav-links li a span {
     position: absolute;
     top: 50%;
@@ -126,18 +122,18 @@ body::before {
 
 /* Hamburger Icon (Hidden for Desktop) */
 .hamburger {
-    display: none; /* Hidden by default for larger screens */
+    display: none;
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%; /* Adjust width for mobile */
-        top: 10px; /* Position from the top */
+        width: 90%;
+        top: 10px;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger for mobile */
+        display: flex;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
@@ -151,18 +147,17 @@ body::before {
     .hamburger div {
         width: 30px;
         height: 3px;
-        background-color: #d0eef4; /* Link Water */
+        background-color: #d0eef4;
         border-radius: 5px;
         transition: all 0.3s ease;
-        box-shadow: 0 0 5px rgba(208, 238, 244, 0.5); /* Glow effect */
+        box-shadow: 0 0 5px rgba(208, 238, 244, 0.5);
     }
 
     .hamburger:hover div {
-        background-color: #37a7e1; /* Picton Blue */
-        box-shadow: 0 0 10px rgba(55, 167, 225, 0.8); /* Stronger glow */
+        background-color: #37a7e1;
+        box-shadow: 0 0 10px rgba(55, 167, 225, 0.8);
     }
 
-    /* Cross Icon when Active */
     .hamburger.active div:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -176,17 +171,17 @@ body::before {
     }
 
     .nav-links {
-        display: none; /* Hidden by default for mobile */
+        display: none;
         position: absolute;
         top: 60px;
         left: 0;
-        background: rgba(5, 16, 38, 0.9); /* Black Pearl with transparency */
+        background: rgba(5, 16, 38, 0.9);
         width: 100%;
         flex-direction: column;
         padding: 15px 0;
-        border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+        border-radius: 0 0 15px 15px;
         z-index: 10;
-        backdrop-filter: blur(10px); /* Frosted glass effect */
+        backdrop-filter: blur(10px);
     }
 
     .nav-links.active {
@@ -200,105 +195,105 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(5, 16, 38, 0.5); /* Black Pearl */
+    background: rgba(5, 16, 38, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #37a7e1; /* Picton Blue */
+    background: #37a7e1;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(55, 167, 225, 0.8); /* Glow effect */
+    box-shadow: 0 0 5px rgba(55, 167, 225, 0.8);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #1751b7; /* Denim */
+    background: #1751b7;
 }
 
+/* ===== MAIN CONTENT CONTAINER ===== */
+.main-content {
+    flex: 1; /* pushes footer down */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px 20px;
+    width: 100%;
+}
 
 /* ===== ASTRONAUT PROFILE SCREEN ===== */
 .astro-profile {
-  display: flex;
-  justify-content: center;
-  margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .profile-screen {
-  background: rgba(7,16,42,0.85);
-  border: 2px solid #37a7e1;
-  border-radius: 16px;
-  padding: 20px 30px;
-  width: 90%;
-  max-width: 700px;
-  box-shadow: 0 0 25px rgba(55,167,225,0.6),
-              inset 0 0 30px rgba(55,167,225,0.1);
-  font-family: 'Orbitron', sans-serif;
-  color: #dff6ff;
-  position: relative;
-  overflow: hidden;
+    background: rgba(7,16,42,0.85);
+    border: 2px solid #37a7e1;
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 0 25px rgba(55,167,225,0.6),
+                inset 0 0 30px rgba(55,167,225,0.1);
+    font-family: 'Orbitron', sans-serif;
+    color: #dff6ff;
+    position: relative;
+    overflow: hidden;
 }
 
 .holo-header {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .holo-header h2 {
-  color: #37a7e1;
-  margin: 0;
-  text-shadow: 0 0 12px rgba(55,167,225,0.9);
+    color: #37a7e1;
+    margin: 0;
+    text-shadow: 0 0 12px rgba(55,167,225,0.9);
 }
 .holo-header p {
-  font-size: 0.9rem;
-  color: #bfeaf7;
-  margin-top: 4px;
+    font-size: 0.9rem;
+    color: #bfeaf7;
+    margin-top: 4px;
 }
 
 .profile-section {
-  border-top: 1px dashed rgba(55,167,225,0.3);
-  margin-top: 16px;
-  padding-top: 12px;
+    border-top: 1px dashed rgba(55,167,225,0.3);
+    margin-top: 16px;
+    padding-top: 12px;
 }
 .profile-section h3 {
-  margin: 0 0 10px;
-  font-size: 1.1rem;
-  color: #37a7e1;
-  text-shadow: 0 0 8px rgba(55,167,225,0.7);
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: #37a7e1;
+    text-shadow: 0 0 8px rgba(55,167,225,0.7);
 }
 .profile-section p {
-  margin: 4px 0;
-  font-size: 0.95rem;
-  color: #bfeaf7;
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #bfeaf7;
 }
 
 /* Scanning overlay */
 .profile-screen::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  background: linear-gradient(
-    to bottom,
-    rgba(55,167,225,0.1) 0%,
-    rgba(55,167,225,0.05) 50%,
-    transparent 100%
-  );
-  animation: scan-line 6s linear infinite;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom, rgba(55,167,225,0.1) 0%, rgba(55,167,225,0.05) 50%, transparent 100%);
+    animation: scan-line 6s linear infinite;
+    pointer-events: none;
 }
 @keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
-}
-/* Ensure the profile-screen is relative so chatbot can be positioned inside it */
-.profile-screen {
-    position: relative; /* already has relative, good */
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
 }
 
-/* Chatbot toggle button at bottom-right of profile-screen */
+/* Chatbot toggle button */
 #chatbot-toggle {
     position: absolute;
-    bottom: 20px; /* distance from bottom of profile-screen */
-    right: 20px;  /* distance from right of profile-screen */
+    bottom: 20px;
+    right: 20px;
     background: radial-gradient(circle at center, #37a7e1, #1751b7);
     border: 2px solid #37a7e1;
     border-radius: 50%;
@@ -310,122 +305,162 @@ body::before {
     animation: float 3s ease-in-out infinite;
 }
 
-/* Chatbot window also relative to profile-screen */
+/* Chatbot window */
 #chatbot-window {
     position: absolute;
-    bottom: 60px; /* just above toggle button */
-    right: 20px;  /* align with toggle */
+    bottom: 60px;
+    right: 20px;
     width: 320px;
     max-height: 400px;
     background: rgba(7,16,42,0.95);
     border: 2px solid #37a7e1;
     border-radius: 16px;
-    display: none; /* hide initially */
+    display: none;
     flex-direction: column;
     box-shadow: 0 0 25px rgba(55,167,225,0.6);
     z-index: 1000;
 }
-
 #chatbot-window.active {
     display: flex;
 }
 
-
+/* Chatbot header */
 #chatbot-header {
-  background: linear-gradient(90deg, #37a7e1, #1751b7);
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0 10px rgba(55,167,225,0.5);
+    background: linear-gradient(90deg, #37a7e1, #1751b7);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(55,167,225,0.5);
 }
-
 #close-chat {
-  cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.2s;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
 }
 #close-chat:hover {
-  transform: rotate(90deg) scale(1.2);
-  color: #ff6b6b;
+    transform: rotate(90deg) scale(1.2);
+    color: #ff6b6b;
 }
 
 .container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .chatbot-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 #chat-box {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 14px;
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
 }
 
 .user-message, .bot-message {
-  margin: 6px 0;
-  padding: 6px 10px;
-  border-radius: 8px;
+    margin: 6px 0;
+    padding: 6px 10px;
+    border-radius: 8px;
 }
-
 .user-message {
-  background: rgba(55,167,225,0.2);
-  align-self: flex-end;
-  color: #dff6ff;
+    background: rgba(55,167,225,0.2);
+    align-self: flex-end;
+    color: #dff6ff;
 }
-
 .bot-message {
-  background: rgba(255,255,255,0.05);
-  align-self: flex-start;
-  color: #bfeaf7;
+    background: rgba(255,255,255,0.05);
+    align-self: flex-start;
+    color: #bfeaf7;
 }
-
 .bold-text { font-weight: bold; }
 .highlight { color: #37a7e1; font-weight: bold; }
 
 .input-area {
-  display: flex;
-  border-top: 1px solid rgba(55,167,225,0.2);
+    display: flex;
+    border-top: 1px solid rgba(55,167,225,0.2);
 }
-
 .input-area input {
-  flex: 1;
-  padding: 6px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #fff;
+    flex: 1;
+    padding: 6px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+.input-area button {
+    background: #37a7e1;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #051026;
+    font-weight: bold;
 }
 
-.input-area button {
-  background: #37a7e1;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  color: #051026;
-  font-weight: bold;
+/* Explorer log button next to chatbot */
+.explorer-log-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
 }
-/* Footer */
+.explorer-log-btn .btn {
+    background: #37a7e1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #051026;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(55,167,225,0.6);
+    transition: all 0.3s ease;
+}
+.explorer-log-btn .btn:hover {
+    background:0 0 15px rgba(55,167,225,0.9);
+    box-shadow: 0 0 15px rgba(55,167,225,0.9);
+}
+
+
+
+.wrap {
+    flex: 1; /* takes all remaining space above footer */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 20px;
+}
+
+/* Remove min-height from profile-screen */
+.profile-screen {
+    background: rgba(7,16,42,0.85);
+    border: 2px solid #37a7e1;
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 0 25px rgba(55,167,225,0.6),
+                inset 0 0 30px rgba(55,167,225,0.1);
+    font-family: 'Orbitron', sans-serif;
+    color: #dff6ff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Footer styling remains same */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
-    border-top: 3px solid #37a7e1; /* Picton Blue */
-    margin-top: 50px;
+    background: rgba(5, 16, 38, 0.8);
+    border-top: 3px solid #37a7e1;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.9em;
-    color: #d0eef4; /* Link Water */
+    color: #d0eef4;
 }
-
 footer a {
     color: #37a7e1; /* Picton Blue */
     text-decoration: none;

@@ -25,76 +25,87 @@
         </ul>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-
     <!-- ===== MAIN WRAPPER ===== -->
     <div class="wrap">
-        <header>
-            <header class="astro-profile">
-                <div class="profile-screen">
-                    <div class="holo-header">
-                        <h2>👩‍🚀 Astronaut Profile: RJH-24</h2>
-                        <p>Status: M.Tech Student at Medicaps | Location: Indore, MP</p>
-                    </div>
-                    <div class="profile-section">
-                        <h3>🎓 Training Logs</h3>
-                        <p><strong>M.Tech (CSE)</strong> — Medi-Caps University (2025–2027)</p>
-                        <p><strong>B.E. (CSE)</strong> — Govt. College of Engineering (2020–2023) — CGPA: 8.46</p>
-                        <p><strong>Diploma</strong> — Computer Technology — CGPA: 9.8</p>
-                    </div>
-                    <div class="profile-section">
-                        <h3>🛰 Expeditions</h3>
-                        <p><strong>Axon Classic Vehicles (2025)</strong> — Market trend dashboard 🚗📊</p>
-                        <p><strong>Credit Card Approval Prediction (2024)</strong> — ML Model (91%) 🧠</p>
-                        <p><strong>ALAG (2023)</strong> — Academic microblogging with NLP (97%) 📚🤖</p>
-                    </div>
-                    <div class="profile-section">
-                        <h3>📡 Mission Badges</h3>
-                        <p>🏅 OdinSchool — Data Science Professional</p>
-                        <p>🏅 IELTS — Band 8.0</p>
-                        <p>🏅 SAP & Microsoft — TECHSAKSHAM</p>
-                        <p>🏅 SAP Conversational AI — Chatbot Specialist</p>
-                    </div>
+        <div class="astro-profile">
+            <div class="profile-screen">
+                <div class="holo-header">
+                    <h2>👩‍🚀 Astronaut Profile: RJH-24</h2>
+                    <p>Status: M.Tech Student at Medicaps | Location: Indore, MP</p>
+                </div>
 
-                    <div class="profile-section">
-                        <h3>🪐 Survival Kit</h3>
-                        <p>Python • Java • SQL • ML • NLP • Power BI • Streamlit • Flask</p>
+                <div class="profile-section">
+                    <h3>🎓 Training Logs</h3>
+                    <p><strong>M.Tech (CSE)</strong> — Medi-Caps University (2025–2027)</p>
+                    <p><strong>B.E. (CSE)</strong> — Govt. College of Engineering (2020–2023) — CGPA: 8.46</p>
+                    <p><strong>Diploma</strong> — Computer Technology — CGPA: 9.8</p>
+                </div>
 
-                        <!-- Chatbot toggle and window -->
+                <div class="profile-section">
+                    <h3>🛰 Expeditions</h3>
+                    <p><strong>Axon Classic Vehicles (2025)</strong> — Market trend dashboard 🚗📊</p>
+                    <p><strong>Credit Card Approval Prediction (2024)</strong> — ML Model (91%) 🧠</p>
+                    <p><strong>ALAG (2023)</strong> — Academic microblogging with NLP (97%) 📚🤖</p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>📡 Mission Badges</h3>
+                    <p>🏅 OdinSchool — Data Science Professional</p>
+                    <p>🏅 IELTS — Band 8.0</p>
+                    <p>🏅 SAP & Microsoft — TECHSAKSHAM</p>
+                    <p>🏅 SAP Conversational AI — Chatbot Specialist</p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>🪐 Survival Kit</h3>
+                    <p>Python • Java • SQL • ML • NLP • Power BI • Streamlit • Flask</p>
+
+                    <!-- Explorer Log Button + Chatbot -->
+                    <div class="explorer-log-btn">
+                        <button class="btn" onclick="window.location.href='assets/documents/Resume.pdf'" download>
+                            Download My Explorer's Log (Resume)
+                        </button>
+
+                        <!-- Chatbot toggle -->
                         <div id="chatbot-toggle">🤖</div>
-                        <div id="chatbot-window">
-                            <div id="chatbot-header">AI Assistant <span id="close-chat">✖</span></div>
-                            <div class="container">
-                                <div class="chatbot-container">
-                                    <div id="chat-box">
-                                        <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!
-                                        </p>
-                                        <p class="bot-message"><span class="bold-text">Bot:</span> Type <span
-                                                class="highlight">topics</span> to see available topics.</p>
-                                    </div>
-                                    <div class="input-area">
-                                        <input type="text" id="user-input" placeholder="Type your message..."
-                                            onkeydown="checkEnter(event)" />
-                                        <button onclick="sendMessage()">Send</button>
-                                    </div>
+                    </div>
+
+                    <!-- Chatbot window -->
+                    <div id="chatbot-window">
+                        <div id="chatbot-header">AI Assistant <span id="close-chat">✖</span></div>
+                        <div class="container">
+                            <div class="chatbot-container">
+                                <div id="chat-box">
+                                    <p class="bot-message"><span class="bold-text">Bot:</span> Welcome, Explorer!</p>
+                                    <p class="bot-message"><span class="bold-text">Bot:</span> Type <span
+                                            class="highlight">topics</span> to see available topics.</p>
+                                </div>
+                                <div class="input-area">
+                                    <input type="text" id="user-input" placeholder="Type your message..."
+                                        onkeydown="checkEnter(event)" />
+                                    <button onclick="sendMessage()">Send</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    </div>
 
+                </div> <!-- profile-section -->
 
-    <!-- JavaScript -->
-    <script src="assets/js/scripts.js"></script>
-    <!-- Footer -->
+            </div> <!-- profile-screen -->
+        </div> <!-- astro-profile -->
+    </div> <!-- wrap -->
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div>
-            <a href="https://x.com/RiddhiXAI" target="_blank">Twitter</a> |
+            <a href="https://x.com/riwiredatma" target="_blank">Twitter</a> |
             <a href="https://github.com/ridhed" target="_blank">GitHub</a> |
             <a href="https://www.linkedin.com/in/riddhi-hedaoo-490a64221/" target="_blank">LinkedIn</a>
         </div>
         <p>&copy; 2025 Riddhi Hedaoo. All Rights Reserved.</p>
     </footer>
+
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

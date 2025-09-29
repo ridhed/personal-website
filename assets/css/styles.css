@@ -271,6 +271,12 @@ p {
     text-shadow: 0 0 5px rgba(55, 167, 225, 0.5); /* Subtle text glow */
 }
 
+.treasure.highlight::before,
+.treasure.highlight:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
 /* Holographic Hover Effect */
 .treasure::before {
     content: '';
