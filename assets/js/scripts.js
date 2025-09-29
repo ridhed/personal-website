@@ -302,5 +302,20 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("🚀 Portfolio loaded successfully!");
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('chatbot-toggle');
+    const chatbot = document.getElementById('chatbot-window');
+    const closeBtn = document.getElementById('close-chat');
+
+    toggle.addEventListener('click', () => {
+        chatbot.classList.toggle('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        chatbot.classList.remove('active');
+    });
+});
+
+
 // Prevent image dragging
 document.addEventListener('dragstart', event => event.preventDefault());

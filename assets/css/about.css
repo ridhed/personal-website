@@ -10,10 +10,9 @@ body {
     overflow-x: hidden;
     display: block;
     perspective: 1000px;
-    position: relative;
 }
 
-/* Futuristic Glow Effect - reduced intensity for clarity */
+/* Futuristic Glow Effect */
 body::before {
     content: '';
     position: absolute;
@@ -21,93 +20,42 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(55, 167, 225, 0.05) 0%, rgba(5, 16, 38, 0) 70%);
+    background: radial-gradient(circle, rgba(55, 167, 225, 0.1) 0%, rgba(5, 16, 38, 0) 70%);
     pointer-events: none;
-    animation: glow 8s infinite alternate;
+    animation: glow 5s infinite alternate;
 }
 
 @keyframes glow {
-    0% { opacity: 0.2; }
-    100% { opacity: 0.5; }
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.8;
+    }
 }
 
-/* Mission Card Styling */
-.mission-card {
-    margin-bottom: 40px;
-    padding: 25px;
-    border-left: 3px solid #37a7e1;
-    background: rgba(5, 16, 38, 0.7); 
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(55, 167, 225, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.mission-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(55, 167, 225, 0.25);
-}
-
-/* Page Title and Intro */
-.page-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(55,167,225,0.5);
-}
-
-.intro-text {
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    line-height: 1.6;
-}
-
-/* Chatbot Container - clearer */
-.chatbot-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 50px auto;
-    background: rgba(5,16,38,0.65);
-    border-radius: 12px;
-    padding: 20px;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Chatbox */
-#chat-box {
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px;
-    background: rgba(5,16,38,0.6);
-    border-radius: 8px;
-    border: 1px solid rgba(55,167,225,0.3);
-}
-
-/* Navbar adjustments - simpler glow */
+/* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the navbar */
     align-items: center;
     padding: 15px 30px;
-    background: rgba(5, 16, 38, 0.65);
-    box-shadow: 0 0 12px rgba(55, 167, 225, 0.25);
+    background: rgba(5, 16, 38, 0.6); /* Semi-transparent Black Pearl */
+    box-shadow: 0 0 20px rgba(55, 167, 225, 0.5); /* Glowing shadow */
     position: fixed;
-    width: 80%;
-    top: 20px;
+    width: 80%; /* Adjust width to make it look centered */
+    top: 20px; /* Position from the top */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    border-radius: 12px;
-    backdrop-filter: blur(6px);
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
     transition: all 0.3s ease;
 }
 
 .navbar:hover {
-    background: rgba(5,16,38,0.75);
-    box-shadow: 0 0 18px rgba(55,167,225,0.4);
+    background: rgba(5, 16, 38, 0.8); /* Darker on hover */
+    box-shadow: 0 0 30px rgba(55, 167, 225, 0.8); /* Stronger glow on hover */
 }
 
 .nav-links {
@@ -266,135 +214,224 @@ body::before {
 }
 
 
-/* Slideshow Container */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 100px auto 0;
-    z-index: 1;
+/* ===== ASTRONAUT PROFILE SCREEN ===== */
+.astro-profile {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
 }
 
-/* Slides */
-.mySlides {
-    display: none;
-    text-align: center;
+.profile-screen {
+  background: rgba(7,16,42,0.85);
+  border: 2px solid #37a7e1;
+  border-radius: 16px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 25px rgba(55,167,225,0.6),
+              inset 0 0 30px rgba(55,167,225,0.1);
+  font-family: 'Orbitron', sans-serif;
+  color: #dff6ff;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Fade animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.holo-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.holo-header h2 {
+  color: #37a7e1;
+  margin: 0;
+  text-shadow: 0 0 12px rgba(55,167,225,0.9);
+}
+.holo-header p {
+  font-size: 0.9rem;
+  color: #bfeaf7;
+  margin-top: 4px;
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+.profile-section {
+  border-top: 1px dashed rgba(55,167,225,0.3);
+  margin-top: 16px;
+  padding-top: 12px;
+}
+.profile-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #37a7e1;
+  text-shadow: 0 0 8px rgba(55,167,225,0.7);
+}
+.profile-section p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #bfeaf7;
 }
 
-/* Chatbot Container */
-.chatbot-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 100px auto 0;
-    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
-    border: 2px solid #37a7e1; /* Picton Blue */
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(55, 167, 225, 0.7); /* Picton Blue shadow */
-    padding: 20px;
-    height: 70vh;
-    display: flex;
+/* Scanning overlay */
+.profile-screen::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    rgba(55,167,225,0.1) 0%,
+    rgba(55,167,225,0.05) 50%,
+    transparent 100%
+  );
+  animation: scan-line 6s linear infinite;
+  pointer-events: none;
+}
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+/* Ensure the profile-screen is relative so chatbot can be positioned inside it */
+.profile-screen {
+    position: relative; /* already has relative, good */
+}
+
+/* Chatbot toggle button at bottom-right of profile-screen */
+#chatbot-toggle {
+    position: absolute;
+    bottom: 20px; /* distance from bottom of profile-screen */
+    right: 20px;  /* distance from right of profile-screen */
+    background: radial-gradient(circle at center, #37a7e1, #1751b7);
+    border: 2px solid #37a7e1;
+    border-radius: 50%;
+    padding: 14px;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 0 20px rgba(55,167,225,0.8), 0 0 40px rgba(55,167,225,0.4);
+    z-index: 1001;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Chatbot window also relative to profile-screen */
+#chatbot-window {
+    position: absolute;
+    bottom: 60px; /* just above toggle button */
+    right: 20px;  /* align with toggle */
+    width: 320px;
+    max-height: 400px;
+    background: rgba(7,16,42,0.95);
+    border: 2px solid #37a7e1;
+    border-radius: 16px;
+    display: none; /* hide initially */
     flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 0 0 25px rgba(55,167,225,0.6);
+    z-index: 1000;
 }
 
-/* Chatbox */
+#chatbot-window.active {
+    display: flex;
+}
+
+
+#chatbot-header {
+  background: linear-gradient(90deg, #37a7e1, #1751b7);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(55,167,225,0.5);
+}
+
+#close-chat {
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+#close-chat:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #ff6b6b;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 #chat-box {
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px;
-    background: rgba(5, 16, 38, 0); 
-    border: 1px solid #37a7e1; /* Picton Blue */
-    border-radius: 5px;
-    margin-bottom: 20px;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
 }
 
-/* Messages */
-.bot-message, .user-message {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.bot-message {
-    background: rgba(55, 167, 225, 0.1); /* Picton Blue with transparency */
-    color: #d0eef4; /* Link Water */
+.user-message, .bot-message {
+  margin: 6px 0;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 .user-message {
-    background: rgba(208, 238, 244, 0.1); /* Link Water with transparency */
-    color: #d0eef4; /* Link Water */
-    text-align: right;
+  background: rgba(55,167,225,0.2);
+  align-self: flex-end;
+  color: #dff6ff;
 }
 
-.bold-text {
-    font-weight: bold;
+.bot-message {
+  background: rgba(255,255,255,0.05);
+  align-self: flex-start;
+  color: #bfeaf7;
 }
 
-.highlight {
-    color: #37a7e1; /* Picton Blue */
-    font-weight: bold;
-}
+.bold-text { font-weight: bold; }
+.highlight { color: #37a7e1; font-weight: bold; }
 
-/* Dynamic Bot Message Colors */
-.bot-message .topic {
-    color: #8d618c; /* Strikemaster */
-    font-weight: bold;
-}
-
-.bot-message .question {
-    color: #1761b7; /* Denim */
-}
-
-.bot-message .answer {
-    color: #37a7e1; /* Picton Blue */
-}
-
-.bot-message .error {
-    color: #ff4444; /* Red */
-}
-
-.bot-message .instruction {
-    color: #d0eef4; /* Link Water */
-}
-
-/* Input Area */
 .input-area {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  border-top: 1px solid rgba(55,167,225,0.2);
 }
 
 .input-area input {
-    flex: 1;
-    padding: 10px;
-    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
-    border: 1px solid #37a7e1; /* Picton Blue */
-    border-radius: 5px;
-    color: #d0eef4; /* Link Water */
-    font-family: 'Roboto', sans-serif;
+  flex: 1;
+  padding: 6px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
 }
 
 .input-area button {
-    padding: 10px 20px;
-    background: #37a7e1; /* Picton Blue */
-    border: none;
-    border-radius: 5px;
-    color: #051026; /* Black Pearl */
+  background: #37a7e1;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #051026;
+  font-weight: bold;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(5, 16, 38, 0.8); /* Black Pearl with transparency */
+    border-top: 3px solid #37a7e1; /* Picton Blue */
+    margin-top: 50px;
     font-family: 'Orbitron', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 0.9em;
+    color: #d0eef4; /* Link Water */
 }
 
-.input-area button:hover {
-    background: #1761b7; /* Denim */
+footer a {
+    color: #37a7e1; /* Picton Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #1751b7; /* Denim */
 }
