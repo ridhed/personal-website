@@ -402,8 +402,8 @@ body::before {
     color: #051026;
     font-weight: bold;
 }
-
-/* Explorer log button next to chatbot 
+*/
+/* Explorer log button next to chatbot */
 .explorer-log-btn {
     display: flex;
     align-items: center;
@@ -426,7 +426,7 @@ body::before {
     box-shadow: 0 0 15px rgba(55,167,225,0.9);
 }
 
-*/
+
 
 .wrap {
     flex: 1; /* takes all remaining space above footer */
