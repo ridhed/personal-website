@@ -289,7 +289,7 @@ body::before {
     100% { transform: translateY(100%); }
 }
 
-/* Chatbot toggle button */
+/* Chatbot toggle button 
 #chatbot-toggle {
     position: absolute;
     bottom: 20px;
@@ -305,7 +305,7 @@ body::before {
     animation: float 3s ease-in-out infinite;
 }
 
-/* Chatbot window */
+/* Chatbot window 
 #chatbot-window {
     position: absolute;
     bottom: 60px;
@@ -324,7 +324,7 @@ body::before {
     display: flex;
 }
 
-/* Chatbot header */
+/* Chatbot header 
 #chatbot-header {
     background: linear-gradient(90deg, #37a7e1, #1751b7);
     color: #fff;
@@ -403,7 +403,7 @@ body::before {
     font-weight: bold;
 }
 
-/* Explorer log button next to chatbot */
+/* Explorer log button next to chatbot 
 .explorer-log-btn {
     display: flex;
     align-items: center;
@@ -426,7 +426,7 @@ body::before {
     box-shadow: 0 0 15px rgba(55,167,225,0.9);
 }
 
-
+*/
 
 .wrap {
     flex: 1; /* takes all remaining space above footer */
